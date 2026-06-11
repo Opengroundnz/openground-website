@@ -1,0 +1,64 @@
+# Pretty URLs: keep the exact paths the Webflow site used (/about, not /about.html).
+# 301s force old .html addresses to the canonical extensionless ones;
+# 200 rewrites serve the underlying files at those addresses.
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-students.html"
+  to = "/for-students"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/success-stories.html"
+  to = "/success-stories"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get-involved.html"
+  to = "/get-involved"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/thank-you"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/for-students"
+  to = "/for-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/success-stories"
+  to = "/success-stories.html"
+  status = 200
+
+[[redirects]]
+  from = "/get-involved"
+  to = "/get-involved.html"
+  status = 200
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
