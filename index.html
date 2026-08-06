@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/og.css?v=4"/>
+<link rel="stylesheet" href="/assets/og.css?v=5"/>
 <link rel="shortcut icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff962b061cf08992244a4_logo-ico.png"/>
 <link rel="apple-touch-icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff9659d986732d4b8c411_logo-webclip.png"/>
 </head>
@@ -44,20 +44,21 @@
         <h1 class="display-xl">
           Start a real business.<br/>
           While you&rsquo;re still at
-          <span class="gw" aria-hidden="true">sch<i class="om om-ring"></i>ol.</span><span class="visually-hidden">school.</span>
+          school.
         </h1>
         <p class="lead">A young founders programme at the B:HIVE, Smales Farm. Real customers, real revenue, a mentor of your own. Not a school project.</p>
         <div class="hero__ctas">
           <a class="btn btn--primary btn--lg" href="/get-involved">Register your interest <span class="arr">&rarr;</span></a>
-          <a class="btn btn--ghost" href="#story">Watch the story</a>
         </div>
         <p class="hero__trust">A registered charitable trust &middot; Running since 2022 &middot; Four schools in 2027</p>
       </div>
-      <div class="hero__media" id="story">
-        <!-- HIGHLIGHT REEL SWAP: when Adam delivers the vertical highlight reel, change
-             class "frame--video" to "frame--tall" on the div below and swap the iframe src. -->
-        <div class="frame frame--pop frame--video">
-          <iframe src="https://www.youtube-nocookie.com/embed/LYyaykr0qZU?rel=0" title="The Openground Story" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="hero__media">
+        <!-- HIGHLIGHT REEL: when Adam delivers the vertical reel, replace the placeholder
+             img below with the 9:16 embed, keeping this frame div:
+             <iframe src="..." title="Openground highlight reel" loading="lazy" allowfullscreen
+                     style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe> -->
+        <div class="frame frame--pop frame--tall" style="max-width:20rem;margin-inline:auto">
+          <img src="/images/placeholders/ph-highlight-reel.svg" alt="Placeholder for the Openground highlight reel video" width="640" height="1138" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
         </div>
         <img class="sticker" src="/assets/marks/burst.svg" alt="" width="72" height="72" style="top:-2.2rem;right:-1.6rem;transform:rotate(12deg)"/>
         <img class="sticker" src="/assets/marks/arrow-loop.svg" alt="" width="84" height="84" style="bottom:-2.6rem;left:-2rem;transform:rotate(-14deg)"/>
@@ -161,20 +162,20 @@
       <div class="grid-3">
         <a class="story-grid-card rv" href="/success-stories">
           <div class="frame frame--tall">
-            <iframe src="https://www.youtube-nocookie.com/embed/YnRt0q409yI?rel=0" title="Oliver Linton interview" loading="lazy" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
-          </div>
-          <h3>Oliver Linton</h3>
-          <p class="small muted">Class of 2023 &middot; Clean Properties, ChargerGoGo</p>
-        </a>
-        <a class="story-grid-card rv" style="--rv-delay:.08s" href="/success-stories">
-          <div class="frame frame--tall">
             <iframe src="https://www.youtube-nocookie.com/embed/HvMabY6-R3Q?rel=0" title="Polo Umali interview" loading="lazy" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
           </div>
           <h3>Polo Umali</h3>
           <p class="small muted">Class of 2022 &middot; sold YourDate at school</p>
         </a>
+        <a class="story-grid-card rv" style="--rv-delay:.08s" href="/success-stories">
+          <div class="frame frame--tall">
+            <iframe src="https://www.youtube-nocookie.com/embed/YnRt0q409yI?rel=0" title="Oliver Linton interview" loading="lazy" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+          </div>
+          <h3>Oliver Linton</h3>
+          <p class="small muted">Class of 2023 &middot; Clean Properties, ChargerGoGo</p>
+        </a>
         <a class="story-grid-card rv" style="--rv-delay:.16s" href="/success-stories">
-          <div class="frame frame--video">
+          <div class="frame frame--tall">
             <iframe src="https://www.youtube-nocookie.com/embed/0NK3S_8jGE4?rel=0" title="Leon Grootscholten interview" loading="lazy" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
           </div>
           <h3>Leon Grootscholten</h3>
@@ -192,7 +193,7 @@
         <div class="rv">
           <p class="eyebrow">The office</p>
           <h2 class="h2">Your office is a real
-            <span class="gw" aria-hidden="true"><i class="om om-ring"></i>ne.</span><span class="visually-hidden">one.</span>
+            one.
           </h2>
           <p class="lead">Sessions run after school at the B:HIVE, Smales Farm: a working building full of working founders. You build your company two minutes from your customers.</p>
           <p class="muted">Monday to Thursday, 3:30 to 5pm.</p>
