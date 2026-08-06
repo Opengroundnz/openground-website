@@ -214,6 +214,12 @@ margin: 0rem !important;
 .og-feature-copy h3 { margin-bottom: 0.25rem; }
 .og-links { padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 1.25rem; }
 .og-links a { color: #191919; font-weight: 500; }
+.div-block {
+  display: grid !important; grid-template-columns: repeat(3, 1fr) !important;
+  grid-gap: 1.5rem !important; align-items: start !important; width: 100% !important;
+}
+.div-block-2 { width: 100% !important; max-width: none !important; margin: 0 !important; }
+@media (max-width: 900px) { .div-block { grid-template-columns: 1fr !important; } }
 .og-mentor-badge {
   display: inline-block; background: #F5BE57; color: #191919;
   border-radius: 999px; padding: 0.3rem 0.9rem; font-size: 0.85rem; font-weight: 500;

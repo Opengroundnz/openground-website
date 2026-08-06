@@ -200,20 +200,21 @@ margin: 0rem !important;
 }
 
 /* Year 12 / Year 13 switch + term stack (brand kit colours only) */
-.og-switch { display: flex; gap: 0.4rem; background: #F2E8DD; border-radius: 999px; padding: 0.35rem; width: max-content; }
+.og-switch { display: flex; gap: 0.4rem; background: #F2E8DD; border-radius: 999px; padding: 0.4rem; width: max-content; margin-left: auto; margin-right: auto; }
 .og-switch-btn {
-  border: 0; background: transparent; font-family: inherit; font-size: 1rem; font-weight: 500;
-  padding: 0.6rem 1.7rem; border-radius: 999px; cursor: pointer; color: #191919;
+  border: 0; background: transparent; font-family: inherit; font-size: 1.15rem; font-weight: 600;
+  padding: 0.85rem 2.6rem; border-radius: 999px; cursor: pointer; color: #191919;
 }
 .og-switch-btn.is-active { background: #191919; color: #fff; }
-.og-availability { margin-top: 1.75rem; max-width: 44rem; }
+.og-availability { margin: 2.25rem auto 0; max-width: 44rem; text-align: center; }
 .og-tab-panel { display: none; }
 .og-tab-panel.is-active { display: block; }
 .og-term {
-  display: grid; grid-template-columns: 5.5rem 1fr minmax(0, 14rem);
-  grid-column-gap: 2.5rem; align-items: center;
-  padding: 2.75rem 0; border-bottom: 1px solid rgba(25, 25, 25, 0.12);
+  display: grid; grid-template-columns: 4.5rem 1fr minmax(0, 24rem);
+  grid-column-gap: 3rem; align-items: center;
+  padding: 3.25rem 0; border-bottom: 1px solid rgba(25, 25, 25, 0.12);
 }
+.og-term-art img { width: 100%; }
 .og-tab-panel .og-term:first-of-type { border-top: 1px solid rgba(25, 25, 25, 0.12); margin-top: 2.5rem; }
 .og-term-num { font-size: 2.75rem; font-weight: 600; color: rgba(25, 25, 25, 0.18); }
 .og-term-chip {
@@ -221,7 +222,7 @@ margin: 0rem !important;
   border-radius: 999px; padding: 0.2rem 0.8rem; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.6rem;
 }
 .og-term-art img { max-width: 100%; }
-.og-panel-cta { padding-top: 2.75rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.og-panel-cta { padding-top: 2.75rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
 .og-fee { font-weight: 500; }
 .og-switch { margin-top: 2rem; }
 @media (max-width: 767px) {
