@@ -308,6 +308,8 @@ p:last-child { margin-bottom: 0; }
   border: 0;
 }
 .frame--tall { aspect-ratio: 9 / 16; }
+.frame--43 { aspect-ratio: 4 / 3; }
+.frame--43 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .img-bw img { filter: grayscale(1) contrast(1.05); }
 
 /* Floating sticker shapes around a frame */
