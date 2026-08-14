@@ -455,14 +455,17 @@ p:last-child { margin-bottom: 0; }
 /* ---- Term timeline (For Students + home snapshot) ---- */
 .term {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
   padding-block: clamp(1.75rem, 3.5vw, 3rem);
   border-top: 2px solid var(--vegemite);
 }
 .term:last-of-type { border-bottom: 2px solid var(--vegemite); }
-.term:nth-child(even) .term__media { order: -1; }
+/* Alternating rows move the photo to the left. It keeps the wider
+   column either way, so every term reads at the same scale. */
+.term--flip { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.term--flip .term__media { order: -1; }
 .term__num {
   font-family: var(--font-head);
   font-weight: 700;
@@ -484,8 +487,8 @@ p:last-child { margin-bottom: 0; }
 }
 .term h3 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
 @media (max-width: 56em) {
-  .term { grid-template-columns: 1fr; }
-  .term:nth-child(even) .term__media { order: 0; }
+  .term, .term--flip { grid-template-columns: 1fr; }
+  .term--flip .term__media { order: 0; }
 }
 
 /* ---- Quotes ---- */

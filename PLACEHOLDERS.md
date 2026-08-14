@@ -9,10 +9,11 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 |---|---|---|
 | Home, the office | `bhive-cohort.jpg` | OG-4, the full room with the whiteboard |
 | Home, quote band | `students-smiling.jpg` | A7402145 |
-| For Students, Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
-| For Students, Term 2 | `mentor-support.jpg` | OG-5, one-on-one help at the desk |
-| For Students, Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
-| For Students, Term 4 | `student-pitch.jpg` | A7402040, pitching to a full room |
+| For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
+| For Students, Year 12 Term 2 | `mentor-support.jpg` | OG-5, one-on-one help at the desk |
+| For Students, Year 12 Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
+| For Students, Year 12 Term 4 | `student-pitch.jpg` | A7402040, pitching to a full room |
+| For Students, Year 13 steps 1-5 | `student-writing.jpg`, `mentor-support.jpg`, `guest-speaker-2.jpg`, `student-pitch.jpg`, `session-working.jpg` | OG-2, OG-5, OG-7, A7402040, OG-3 |
 | For Students, joining | `student-writing.jpg` | OG-2, student working through a session sheet |
 | About, story column | `bhive-exterior.jpg`, `logo-glass.jpg`, `session-working.jpg` | the building, the logo on glass, OG-3 |
 | Get Involved, left rail | `worksheet-bw.jpg` | OG, black and white session sheet detail |
@@ -32,6 +33,7 @@ room: `session-whiteboard.jpg`, `mentor-huddle.jpg`, `cohort-pitch.jpg`,
 | `ph-smale-seat.svg` | (unused until named) | Smale family trustee headshot, square |
 | (no placeholder, nice-to-have) | For Students, Term 4 | A real Showcase Night or prize giving photo with a full room |
 | (no placeholder, nice-to-have) | About, story column | A posed cohort group shot |
+| (no placeholder, nice-to-have) | For Students, Year 13 | Year 13 borrows three frames from Year 12 (`mentor-support`, `student-pitch`) and the wider library. The two tabs are never on screen together, but Year 13 would be stronger with its own shoot, especially a real Dragon's Den. |
 
 ## Other pending swaps
 
