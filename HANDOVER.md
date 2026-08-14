@@ -1,8 +1,8 @@
 # Website refresh handover (branch: jarvis/website-refresh)
 
-Context for continuing this work in a Cloud session. Written 6 Aug 2026 after the
-full UI rebuild commit. Cloud sessions have no local filesystem access, so
-everything needed to continue lives in this file, PLACEHOLDERS.md, and the code.
+Context for continuing this work in a new session. Written 6 Aug 2026 after the
+full UI rebuild, last updated 14 Aug 2026. Everything needed to continue lives in
+this file, PLACEHOLDERS.md, and the code.
 
 ## State
 
@@ -11,8 +11,7 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 - `assets/og.css`: the design system. Brand tokens from the Openground Style Guide v1.0:
   Hokey Pokey `#F5BE57`, Vegemite `#191919`, Pavlova `#F2E8DD`, Lupin Purple `#A574BD`,
   Blue Pinkgill `#3D6AF6`. Epilogue for headlines, Poppins for body. Playful editorial
-  feel: inline logo-style marks replacing the letter "o" in headlines (`.om` classes),
-  hard offset shadows (`--shadow-pop`), colour-blocked sections, B&W portraits that
+  feel: hard offset shadows (`--shadow-pop`), colour-blocked sections, B&W portraits that
   colour on hover, reveal-on-scroll (`.rv` + IntersectionObserver with a 1.6s safety
   fallback), a marquee ticker, mobile off-canvas nav.
 - `assets/og.js`: nav, reveals, quote rotator, Year 12/13 switch, Get Involved form
@@ -21,7 +20,16 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting).
+- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v11.
+- **No inline `style=` attributes.** They were all moved into named classes on
+  14 Aug; keep it that way, it is the main thing that stopped the markup reading
+  as machine-generated.
+- Layout classes worth knowing: `.split` (copy beside a form/media), `.term` +
+  `.term--flip` (alternating photo rows, photo always takes the wider 7fr column),
+  `.stagger` (reveal delays via nth-child, no per-element inline delays),
+  `.frame--43 / --tall / --video` (ratio frames whose children self-fill),
+  `.measure*` + `.centred` (line-length caps), `.lead-person`, `.team-card`,
+  `.tribute`, `.price`, `.pullquote`.
 
 ## Non-negotiable constraints
 
@@ -35,6 +43,8 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 4. **No em or en dashes. British NZ English.**
 5. **Never push to main.** Branch, PR, Will merges, Netlify deploys from main.
 6. No external CDN dependencies beyond Google Fonts and youtube-nocookie embeds.
+7. **Heading order must not skip levels** (h1 to h2 to h3). Footer column headings
+   are `h3`. The Impeccable detector flags any regression.
 
 ## Content decisions already applied (do not revert)
 
@@ -58,19 +68,38 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   24 schools (Leon Grootscholten, 2025), running since 2022, 1:1 mentor pairing.
   Do not invent numbers beyond these.
 
+## Design review status
+
+Run `npx impeccable@latest detect *.html assets/og.css` (needs Node 22+, use
+`/opt/homebrew/opt/node@22/bin` on Will's MacBook). It reports **0 findings** as of
+14 Aug. It previously caught, and these are fixed, do not reintroduce:
+a thick left border on story outcome lines (the classic AI-generated-UI tell),
+skipped heading levels, a flat type scale, and low-contrast muted text on dark.
+
+## Photography
+
+See PLACEHOLDERS.md for the full slot-by-slot map. Two rules learned the hard way:
+
+- **Year 12 uses photography, Year 13 keeps the original Webflow illustrations.**
+  A photo swap on Year 13 was tried on 14 Aug and Will rejected it; it was reverted
+  in commit 2ae477d. Do not redo it without asking.
+- Prefer variety of scale and subject over repeated wide shots of the same room.
+
 ## Open items awaiting Will
 
 1. **Bill Smale tribute wording** (about.html): must have Will's explicit sign-off
    before merge. Do not publish anything about Bill without it.
-2. **Image placeholders**: 12 labelled SVGs, see PLACEHOLDERS.md for the full list
-   and specs. Will supplies the photos.
+2. **Headshots still needed**: Brett Hollister, Dale Viljoen, Adam Bone (square),
+   plus the Smale family trustee when named. Everything else is real photography now.
+   A genuine Showcase Night / prize giving shot would improve Year 12 Term 4.
 3. **Alumni link URLs** on success-stories.html: chips are `#` with `data-todo`
    attributes (olly-linkedin, olly-clean-properties, olly-chargergogo, polo-linkedin,
    polo-portfolio, leon-linkedin, leon-writewise, will-linkedin, will-caivo).
 4. **Sessions line**: "Monday to Thursday, 3:30 to 5pm" is on the home page and the
    For Students FAQ; Will to confirm before merge.
-5. **Highlight reel**: when Adam delivers the vertical reel, follow the
-   `HIGHLIGHT REEL SWAP` comment in index.html (frame--video to frame--tall, swap src).
+5. **Highlight reel**: the home hero holds a labelled vertical placeholder. When Adam
+   delivers the reel, follow the `HIGHLIGHT REEL` comment in index.html and swap the
+   placeholder img for the 9:16 embed.
 6. Optional: TVNZ Breakfast appearance (two 2026 students, May 2026) is a strong
    proof point, currently left off pending clip rights and Will's call.
 
@@ -82,6 +111,9 @@ Any static server works; pretty URLs need extensionless mapping
 ```bash
 npx serve -l 8890 .
 ```
+
+The preview server used in-session sends `Cache-Control: no-store`; without that the
+browser happily serves a stale copy and it looks like your edits did nothing.
 
 ## Definition of done
 
