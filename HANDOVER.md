@@ -20,7 +20,12 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v11.
+- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v12.
+- Home page order (Will, 15 Aug): hero, ticker, track-record stats (3), testimonials
+  (no photo), the year as a mini timeline (`.steps--mini .steps--terms`), the office
+  (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (school
+  logo placeholders), mentors/partners, CTA band, supporter strip (`.sponsor-row`,
+  greyscale logos). All general CTAs read "Get involved".
 - **No inline `style=` attributes.** They were all moved into named classes on
   14 Aug; keep it that way, it is the main thing that stopped the markup reading
   as machine-generated.
@@ -54,12 +59,16 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   the separate in-school Westlake programme).
 - Year 13: "runs as a course during school time... details announced during 2027".
   The old "two to three timetabled periods" claim is unverified; do not restore it.
-- "150+ mentors and guest speakers" removed as unsupported (2026 has 12 active
-  mentor pairings; ~150 is the size of the whole contact database). Current copy:
-  "every student gets a mentor".
+- "150+ mentors and guest speakers" was removed on 5 Aug as unsupported (12 active
+  pairings; ~150 is the whole contact database). On 15 Aug Will explicitly asked for
+  it back as a home stat; the copy says "in the network", which matches what the
+  ~150 actually is. Same day, from Will: "100+ students taken through the programme"
+  (he floated 150+; 100+ is the conservative number used).
 - Contact address is admin@openground.co.nz everywhere (info@ is Webflow-era).
-- No "backed by Westlake" branding (5 Aug decision: Westlake branding off all
-  Openground material). Trust line: registered charitable trust, B:HIVE, since 2022.
+- No "backed by Westlake" branding of Openground's own identity (5 Aug decision).
+  Exception, 15 Aug at Will's direction: the Westlake Boys crest appears in the home
+  supporter strip ("Backed by the best") alongside Smales Farm (placeholder) and
+  CAIVO. Thanking a partner is not co-branding.
 - Board: Will Montague-Brown, Paul Fordham, Brett Hollister (Advancement and
   Development Manager at Westlake Boys, appointed 2026), fourth seat held for the
   Smale family (TBA). Operations: Steve Anderson (Programme Coordinator),

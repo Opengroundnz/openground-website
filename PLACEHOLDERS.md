@@ -7,8 +7,8 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 
 | Slot | File | Source |
 |---|---|---|
-| Home, the office | `bhive-cohort.jpg` | OG-4, the full room with the whiteboard |
-| Home, quote band | `students-smiling.jpg` | A7402145 |
+| Home, the office | `bhive-exterior.jpg` + `bhive-staircase.jpg` | The Y12 assembly deck (exterior is the same shot About uses) |
+| Home, the year timeline | `students-smiling.jpg` | A7402145 |
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
 | For Students, Year 12 Term 2 | `mentor-support.jpg` | OG-5, one-on-one help at the desk |
 | For Students, Year 12 Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
@@ -20,13 +20,22 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 
 Removed in the August 2026 pass because they duplicated better frames of the same
 room: `session-whiteboard.jpg`, `mentor-huddle.jpg`, `cohort-pitch.jpg`,
-`bhive-floor.jpg`. They are still in git history if any are wanted back.
+`bhive-floor.jpg`, `bhive-cohort.jpg` (replaced by the two building shots on home).
+They are still in git history if any are wanted back.
 `OG-7.jpg` was not used: it is the same moment as `OG-6.jpg`, which is the warmer frame.
+
+## Logos in place
+
+`images/logos/westlake-boys.png` (from the Westlake chatbot repo) and
+`images/logos/caivo.png` (CAIVO Clear TIGHT, from the brand folder in Drive) sit in
+the home page supporter strip, greyscale at rest.
 
 ## Still wanted
 
 | Placeholder file | Where it appears | What to supply |
 |---|---|---|
+| `ph-logo-westlake-boys.svg` etc | Home, New for 2027 cards | Clean crest/logo for each of the four schools, square, transparent PNG or SVG |
+| `ph-logo-smales-farm.svg` | Home, supporter strip | Smales Farm logo, horizontal, transparent |
 | `ph-brett-hollister.svg` | About, board | Brett Hollister headshot, square |
 | `ph-dale-viljoen.svg` | About, operations | Dale Viljoen headshot, square |
 | `ph-adam-bone.svg` | About, operations | Adam Bone headshot, square |
