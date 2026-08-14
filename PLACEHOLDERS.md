@@ -1,20 +1,26 @@
-# Image placeholders to replace
+# Images: what is in place, what is still wanted
 
-Every grey dashed box on the site is a labelled SVG in `images/placeholders/`.
+Grey dashed boxes on the site are labelled SVGs in `images/placeholders/`.
 To replace one: drop the real photo into `images/`, then swap the `src` in the page listed below.
-Keep roughly the same aspect ratio (noted on each placeholder).
 
-## Filled (August 2026, from the Openground Photo Assets folder)
+## Photography in place
 
-| Slot | Photo now in place |
-|---|---|
-| For Students, Term 1 | `images/session-whiteboard.jpg` (A7402034, session at the whiteboard) |
-| For Students, Term 2 | `images/mentor-huddle.jpg` (JUNE CONTENT 19_07, huddle over a laptop) |
-| For Students, Term 3 | `images/student-pitch.jpg` (A7402040, pitching to the room) |
-| For Students, Term 4 | `images/cohort-pitch.jpg` (A7402041, group presenting to the cohort) |
-| Home, quote band | `images/students-smiling.jpg` (A7402145) |
-| Home, office section | `images/bhive-floor.jpg` (A7402035, interior floor) |
-| About, story column | `images/logo-glass.jpg` (A7402141, logo on glass) |
+| Slot | File | Source |
+|---|---|---|
+| Home, the office | `bhive-cohort.jpg` | OG-4, the full room with the whiteboard |
+| Home, quote band | `students-smiling.jpg` | A7402145 |
+| For Students, Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
+| For Students, Term 2 | `mentor-support.jpg` | OG-5, one-on-one help at the desk |
+| For Students, Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
+| For Students, Term 4 | `student-pitch.jpg` | A7402040, pitching to a full room |
+| For Students, joining | `student-writing.jpg` | OG-2, student working through a session sheet |
+| About, story column | `bhive-exterior.jpg`, `logo-glass.jpg`, `session-working.jpg` | the building, the logo on glass, OG-3 |
+| Get Involved, left rail | `worksheet-bw.jpg` | OG, black and white session sheet detail |
+
+Removed in the August 2026 pass because they duplicated better frames of the same
+room: `session-whiteboard.jpg`, `mentor-huddle.jpg`, `cohort-pitch.jpg`,
+`bhive-floor.jpg`. They are still in git history if any are wanted back.
+`OG-7.jpg` was not used: it is the same moment as `OG-6.jpg`, which is the warmer frame.
 
 ## Still wanted
 
@@ -24,8 +30,7 @@ Keep roughly the same aspect ratio (noted on each placeholder).
 | `ph-dale-viljoen.svg` | About, operations | Dale Viljoen headshot, square |
 | `ph-adam-bone.svg` | About, operations | Adam Bone headshot, square |
 | `ph-smale-seat.svg` | (unused until named) | Smale family trustee headshot, square |
-| (no placeholder, nice-to-have) | For Students, Term 2 | A real mentor-and-student pairing photo would beat the current student huddle |
-| (no placeholder, nice-to-have) | For Students, Term 4 | An actual Showcase Night / prize giving photo with a full room |
+| (no placeholder, nice-to-have) | For Students, Term 4 | A real Showcase Night or prize giving photo with a full room |
 | (no placeholder, nice-to-have) | About, story column | A posed cohort group shot |
 
 ## Other pending swaps
