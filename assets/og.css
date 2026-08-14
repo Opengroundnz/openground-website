@@ -44,7 +44,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   line-height: 1.65;
   color: var(--vegemite);
   background: var(--paper);
@@ -75,14 +75,17 @@ p:last-child { margin-bottom: 0; }
 
 ::selection { background: var(--hokey); color: var(--vegemite); }
 
-/* ---- Type scale ---- */
+/* ---- Type scale ----
+   Steps rise by about 1.25x so hierarchy reads at a glance:
+   12 / 15 / 18 body / 22 / 28+ headings. */
 .display-xl { font-size: clamp(2.6rem, 5.5vw, 4.6rem); }
 .display    { font-size: clamp(2.25rem, 5vw, 4rem); }
 .h2         { font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
 .h3         { font-size: clamp(1.35rem, 2.2vw, 1.75rem); }
-.lead       { font-size: clamp(1.125rem, 1.7vw, 1.375rem); line-height: 1.5; color: var(--ink-soft); }
+.h4         { font-size: 1.375rem; }
+.lead       { font-size: clamp(1.1875rem, 1.7vw, 1.4375rem); line-height: 1.5; color: var(--ink-soft); }
 .small      { font-size: 0.9375rem; }
-.tiny       { font-size: 0.8125rem; }
+.tiny       { font-size: 0.75rem; }
 
 .eyebrow {
   display: inline-flex;
@@ -104,6 +107,7 @@ p:last-child { margin-bottom: 0; }
   flex: none;
 }
 .eyebrow.on-dark { color: var(--pavlova); }
+.eyebrow--centred { justify-content: center; }
 
 .muted { color: var(--ink-soft); }
 
@@ -133,7 +137,7 @@ p:last-child { margin-bottom: 0; }
   gap: 0.6rem;
   font-family: var(--font-head);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1;
   padding: 1.05rem 1.9rem;
   border-radius: 999px;
@@ -301,15 +305,22 @@ p:last-child { margin-bottom: 0; }
 }
 .frame--pop { box-shadow: var(--shadow-pop); }
 .frame img { width: 100%; object-fit: cover; }
+/* Any frame with a fixed ratio fills itself, so pages never repeat the
+   absolute-inset boilerplate on every embed. */
+.frame--video, .frame--tall, .frame--43 { }
 .frame--video { aspect-ratio: 16 / 9; }
-.frame--video iframe, .frame--video video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  border: 0;
-}
 .frame--tall { aspect-ratio: 9 / 16; }
 .frame--43 { aspect-ratio: 4 / 3; }
-.frame--43 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.frame--video > *, .frame--tall > *, .frame--43 > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+/* Vertical films sit at a readable width and centre in their column. */
+.frame--portrait { max-width: 22rem; margin-inline: auto; }
 .img-bw img { filter: grayscale(1) contrast(1.05); }
 
 /* Floating sticker shapes around a frame */
@@ -318,6 +329,10 @@ p:last-child { margin-bottom: 0; }
   pointer-events: none;
   z-index: 2;
 }
+.sticker--tr { top: -2.2rem; right: -1.6rem; transform: rotate(12deg); }
+.sticker--tl { top: -1.6rem; left: -1.2rem; }
+.sticker--bl { bottom: -2.6rem; left: -2rem; transform: rotate(-14deg); }
+.has-stickers { position: relative; }
 
 /* ---- Ticker marquee ---- */
 .ticker {
@@ -377,20 +392,37 @@ p:last-child { margin-bottom: 0; }
   background: var(--paper);
   border: 2px solid var(--vegemite);
   border-radius: var(--radius);
+  padding: 1.75rem;
   padding: clamp(1.5rem, 3vw, 2.25rem);
 }
 .card--pop { box-shadow: var(--shadow-pop); }
 .card--flat { border-color: var(--line); border-width: 1px; }
+.card--roomy { padding: 2.5rem; padding: clamp(2rem, 5vw, 3.5rem); }
 
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1.25rem, 2.5vw, 2rem); }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 2.5vw, 2rem); }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.75rem); }
+.grid-2--tight { gap: 1rem; }
+.grid-2--wide { gap: clamp(2.5rem, 6vw, 5rem); }
+.grid--middle { align-items: center; }
+.grid--top { align-items: start; }
 @media (max-width: 56em) {
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
 }
 @media (max-width: 36em) {
   .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* Copy alongside media: text column left, media column right. */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+@media (max-width: 56em) {
+  .split { grid-template-columns: 1fr; }
 }
 
 /* School cards */
@@ -526,6 +558,61 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 0.6rem;
 }
 .person p { font-size: 0.9375rem; color: var(--ink-soft); }
+.person__photo--sm { max-width: 4.5rem; }
+.person__photo--md { max-width: 7rem; }
+
+/* Operations: one lead card, then the supporting team. */
+.lead-person {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lead-person__body { flex: 1; min-width: 16rem; }
+.team-card__name { font-size: 1.375rem; margin: 1rem 0 0; }
+.team-card .person__role { margin: 0 0 0.35rem; }
+.team-card p { margin: 0; }
+
+/* Founder tribute: portrait beside the words. */
+.tribute {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr);
+  align-items: center;
+  gap: 1.75rem;
+}
+.tribute__portrait {
+  border-radius: 50%;
+  max-width: 11rem;
+  width: 100%;
+  justify-self: center;
+}
+@media (max-width: 56em) {
+  .tribute { grid-template-columns: 1fr; }
+}
+
+/* The fee, stated plainly. */
+.price {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0;
+}
+
+/* A single standing quote, outside the rotator. */
+.pullquote {
+  margin: 0;
+  max-width: 52rem;
+}
+.pullquote blockquote {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
 
 /* ---- Story cards (Success Stories) ---- */
 .story {
@@ -558,14 +645,16 @@ p:last-child { margin-bottom: 0; }
 a.chip:hover { background: var(--hokey); }
 .chip--fill { background: var(--vegemite); color: var(--pavlova); }
 .chip--hokey { background: var(--hokey); border-color: var(--hokey); }
+/* The headline outcome. Set as a deck line rather than a bordered callout:
+   size and weight carry the emphasis, not a rule down the side. */
 .story__result {
   font-family: var(--font-head);
   font-weight: 600;
-  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
-  letter-spacing: -0.01em;
-  padding-left: 1rem;
-  border-left: 4px solid var(--hokey);
-  margin: 1.25rem 0;
+  font-size: clamp(1.3rem, 2.1vw, 1.7rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0.75rem 0 1rem;
+  text-wrap: balance;
 }
 @media (max-width: 56em) {
   .story { grid-template-columns: 1fr; }
@@ -612,6 +701,7 @@ a.chip:hover { background: var(--hokey); }
   background: var(--paper);
 }
 textarea.input { min-height: 7.5rem; resize: vertical; }
+textarea.input--short { min-height: 5.5rem; }
 select.input {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23191919' stroke-width='2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -758,13 +848,13 @@ select.input {
   padding-bottom: 3rem;
 }
 .footer__logo img { width: clamp(11rem, 16vw, 14rem); }
-.footer__blurb { color: rgba(242,232,221,0.65); font-size: 0.9375rem; max-width: 22rem; margin-top: 1.25rem; }
-.footer h4 {
+.footer__blurb { color: rgba(242,232,221,0.78); font-size: 0.9375rem; max-width: 22rem; margin-top: 1.25rem; }
+.footer h3 {
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(242,232,221,0.5);
+  color: rgba(242,232,221,0.7);
   margin-bottom: 1.1rem;
 }
 .footer__links { list-style: none; margin: 0; padding: 0; }
@@ -777,6 +867,7 @@ select.input {
   font-size: 1rem;
 }
 .footer__links a:hover { color: var(--hokey); }
+.footer__meta { color: rgba(242,232,221,0.78); font-size: 0.9375rem; }
 .footer__base {
   display: flex;
   flex-wrap: wrap;
@@ -786,7 +877,7 @@ select.input {
   border-top: 1px solid rgba(242,232,221,0.18);
   padding-top: 1.75rem;
   font-size: 0.8125rem;
-  color: rgba(242,232,221,0.5);
+  color: rgba(242,232,221,0.7);
 }
 .footer__socials { display: flex; gap: 1rem; }
 .footer__socials a {
@@ -812,6 +903,12 @@ select.input {
   transition-delay: var(--rv-delay, 0s);
 }
 .rv.is-in { opacity: 1; transform: none; }
+/* Children of a stagger row reveal one after another. */
+.stagger > *:nth-child(2) { --rv-delay: 0.08s; }
+.stagger > *:nth-child(3) { --rv-delay: 0.16s; }
+.stagger > *:nth-child(4) { --rv-delay: 0.24s; }
+.stagger > *:nth-child(5) { --rv-delay: 0.32s; }
+.stagger > *:nth-child(6) { --rv-delay: 0.4s; }
 @media (prefers-reduced-motion: reduce) {
   .rv { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
@@ -824,7 +921,36 @@ select.input {
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
+.mb-0 { margin-bottom: 0; }
 .mb-2 { margin-bottom: 2rem; }
+.flush-top { padding-top: 0; }
+
+/* Line-length caps. Prose stays readable instead of running the full width. */
+.measure-sm { max-width: 34rem; }
+.measure    { max-width: 38rem; }
+.measure-lg { max-width: 42rem; }
+.measure-xl { max-width: 44rem; }
+.centred { margin-inline: auto; }
+
+/* Text sitting on the dark sections. */
+.on-dark-soft { color: rgba(242, 232, 221, 0.78); }
+
+.fw-normal { font-weight: 400; }
+.fw-medium { font-weight: 500; }
+.fw-head { font-family: var(--font-head); font-weight: 600; }
+
+/* Full-width submit on a form that already has its own column. */
+.btn--block { width: 100%; }
+
+/* A page whose whole content sits in the middle of the viewport. */
+.screen-centred {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+}
+
+/* Spam trap. Never shown, never filled by a person. */
+.honeypot { display: none; }
 .visually-hidden {
   position: absolute !important;
   width: 1px; height: 1px;

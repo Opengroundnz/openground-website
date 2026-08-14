@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/og.css?v=6"/>
+<link rel="stylesheet" href="/assets/og.css?v=7"/>
 <link rel="shortcut icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff962b061cf08992244a4_logo-ico.png"/>
 <link rel="apple-touch-icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff9659d986732d4b8c411_logo-webclip.png"/>
 </head>
@@ -36,17 +36,14 @@
   <section class="section section--tight bg-pavlova">
     <div class="container">
       <p class="eyebrow">Get involved</p>
-      <h1 class="display">
-        Start
-        here.
-      </h1>
-      <p class="lead" style="max-width:38rem">Students, mentors, partners. Two minutes, one form, and we take it from there.</p>
+      <h1 class="display">Start here.</h1>
+      <p class="lead measure">Students, mentors, partners. Two minutes, one form, and we take it from there.</p>
     </div>
   </section>
 
-  <section class="section bg-pavlova" style="padding-top:0">
+  <section class="section flush-top bg-pavlova">
     <div class="container">
-      <div style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,5vw,4.5rem);align-items:start">
+      <div class="split">
 
         <!-- Left rail -->
         <div class="rv">
@@ -58,18 +55,18 @@
             <li><strong>Hear back in Term 4</strong><span>Accepted students are notified and invoiced on acceptance.</span></li>
           </ol>
 
-          <div class="card mt-3" style="background:var(--paper)">
-            <h3 style="font-size:1.05rem;margin-bottom:.4rem">Mentors and partners</h3>
-            <p class="small muted" style="margin-bottom:.6rem">Tell us what you have built and where you can help. We select mentors based on the student businesses each year, and every mentor is background checked.</p>
-            <p class="small" style="margin:0">Prefer email? <a href="mailto:admin@openground.co.nz" class="link-plain">admin@openground.co.nz</a></p>
+          <div class="card mt-3">
+            <h3 class="h4">Mentors and partners</h3>
+            <p class="small muted">Tell us what you have built and where you can help. We select mentors based on the student businesses each year, and every mentor is background checked.</p>
+            <p class="small mb-0">Prefer email? <a href="mailto:admin@openground.co.nz" class="link-plain">admin@openground.co.nz</a></p>
           </div>
         </div>
 
         <!-- Form -->
-        <div class="form-shell rv" style="--rv-delay:.1s">
+        <div class="form-shell rv">
           <form id="wf-form-Contact-Form" name="contact" data-name="Contact Form" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact"/>
-            <p style="display:none"><label>Leave this empty: <input name="bot-field"/></label></p>
+            <p class="honeypot"><label>Leave this empty: <input name="bot-field"/></label></p>
 
             <div class="field">
               <label for="Interest">I am a...</label>
@@ -90,7 +87,7 @@
               </select>
             </div>
 
-            <div class="grid-2" style="gap:1rem">
+            <div class="grid-2 grid-2--tight">
               <div class="field">
                 <label for="First-Name">First name</label>
                 <input class="input" maxlength="256" name="First-Name" data-name="First Name" type="text" id="First-Name" required/>
@@ -101,19 +98,19 @@
               </div>
             </div>
 
-            <div class="grid-2" style="gap:1rem">
+            <div class="grid-2 grid-2--tight">
               <div class="field">
                 <label for="Email">Email</label>
                 <input class="input" maxlength="256" name="Email" data-name="Email" type="email" id="Email" required/>
               </div>
               <div class="field">
-                <label for="Phone">Phone <span class="muted" style="font-weight:400">(optional)</span></label>
+                <label for="Phone">Phone <span class="muted fw-normal">(optional)</span></label>
                 <input class="input" maxlength="40" name="Phone" data-name="Phone" type="tel" id="Phone"/>
               </div>
             </div>
 
             <div data-og-branch="student" hidden>
-              <div class="grid-2" style="gap:1rem">
+              <div class="grid-2 grid-2--tight">
                 <div class="field">
                   <label for="School">Your school</label>
                   <select id="School" name="School" class="input">
@@ -152,7 +149,7 @@
                 <label for="Experience">Your experience and career</label>
                 <textarea id="Experience" name="Experience" maxlength="5000" placeholder="What you have done in business, and what you do now." class="input"></textarea>
               </div>
-              <div class="grid-2" style="gap:1rem">
+              <div class="grid-2 grid-2--tight">
                 <div class="field">
                   <label for="LinkedIn">LinkedIn URL</label>
                   <input class="input" maxlength="300" name="LinkedIn" type="url" id="LinkedIn" placeholder="https://www.linkedin.com/in/..."/>
@@ -166,7 +163,7 @@
 
             <div class="field">
               <label for="Comments">Anything else?</label>
-              <textarea id="Comments" name="Comments" maxlength="5000" data-name="Comments" placeholder="Optional." class="input" style="min-height:5.5rem"></textarea>
+              <textarea id="Comments" name="Comments" maxlength="5000" data-name="Comments" placeholder="Optional." class="input input--short"></textarea>
             </div>
 
             <label class="check">
@@ -174,8 +171,8 @@
               <span>Keep me up to date with Openground news</span>
             </label>
 
-            <button type="submit" class="btn btn--primary btn--lg" style="width:100%">Send <span class="arr">&rarr;</span></button>
-            <p class="tiny muted text-center mt-1" style="margin-bottom:0">We reply from admin@openground.co.nz.</p>
+            <button type="submit" class="btn btn--primary btn--lg btn--block">Send <span class="arr">&rarr;</span></button>
+            <p class="tiny muted text-center mt-1 mb-0">We reply from admin@openground.co.nz.</p>
           </form>
         </div>
 
@@ -195,7 +192,7 @@
         <p class="footer__blurb">A charitable trust helping high school students build real businesses, from the B:HIVE at Smales Farm, Takapuna.</p>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h3>Explore</h3>
         <ul class="footer__links">
           <li><a href="/about">About</a></li>
           <li><a href="/for-students">For Students</a></li>
@@ -204,10 +201,10 @@
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <ul class="footer__links">
           <li><a href="mailto:admin@openground.co.nz">admin@openground.co.nz</a></li>
-          <li><span style="color:rgba(242,232,221,.65);font-size:.9375rem">The B:HIVE, Smales Farm,<br/>Takapuna, Auckland</span></li>
+          <li><span class="footer__meta">The B:HIVE, Smales Farm,<br/>Takapuna, Auckland</span></li>
         </ul>
         <div class="footer__socials mt-1">
           <a href="https://www.instagram.com/openground.nz" target="_blank" rel="noopener" aria-label="Openground on Instagram"><img src="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ffdd4e1caf88c247df7d9_icon-instagram-white.svg" alt=""/></a>
@@ -223,14 +220,6 @@
   </div>
 </footer>
 
-<script>
-/* Stack the split layout on small screens */
-</script>
-<style>
-@media (max-width: 56em) {
-  main .container > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-}
-</style>
 <script src="/assets/og.js" defer></script>
 </body>
 </html>
