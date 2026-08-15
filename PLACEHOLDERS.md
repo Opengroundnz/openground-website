@@ -7,8 +7,9 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 
 | Slot | File | Source |
 |---|---|---|
-| Home, the office | `bhive-exterior.jpg` + `bhive-staircase.jpg` | The Y12 assembly deck (exterior is the same shot About uses) |
-| Home, the year timeline | `students-smiling.jpg` | A7402145 |
+| Home, the office | `bhive-exterior.jpg` + `bhive-staircase.jpg` | The Y12 assembly deck |
+| Home, the year timeline | `session-whiteboard.jpg` | OG, restored from git at Will's request 15 Aug |
+| About, board + operations | `will-montague-brown.jpg` | Will's Profile Zoomed.jpg (Desktop), supplied 15 Aug |
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
 | For Students, Year 12 Term 2 | `mentor-support.jpg` | OG-5, one-on-one help at the desk |
 | For Students, Year 12 Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
@@ -18,23 +19,24 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 | About, story column | `bhive-exterior.jpg`, `logo-glass.jpg`, `session-working.jpg` | the building, the logo on glass, OG-3 |
 | Get Involved, left rail | `worksheet-bw.jpg` | OG, black and white session sheet detail |
 
-Removed in the August 2026 pass because they duplicated better frames of the same
-room: `session-whiteboard.jpg`, `mentor-huddle.jpg`, `cohort-pitch.jpg`,
-`bhive-floor.jpg`, `bhive-cohort.jpg` (replaced by the two building shots on home).
-They are still in git history if any are wanted back.
+Removed in the August 2026 passes because they duplicated better frames of the same
+room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.jpg`,
+`students-smiling.jpg`. They are still in git history if any are wanted back
+(`session-whiteboard.jpg` was restored that way on 15 Aug).
 `OG-7.jpg` was not used: it is the same moment as `OG-6.jpg`, which is the warmer frame.
 
 ## Logos in place
 
-`images/logos/westlake-boys.png` (from the Westlake chatbot repo) and
-`images/logos/caivo.png` (CAIVO Clear TIGHT, from the brand folder in Drive) sit in
-the home page supporter strip, greyscale at rest.
+- Supporter strip: `images/logos/westlake-boys.png` (Westlake chatbot repo) and
+  `images/logos/caivo.png` (CAIVO Clear TIGHT, brand folder in Drive), greyscale at rest.
+- School cards: `westlake-boys-crest.png`, `westlake-girls-crest.png`,
+  `rosmini-crest.png`, `carmel-crest.png` in `images/logos/`, all cut from the
+  Y12 assembly deck (FINAL) media with transparent backgrounds.
 
 ## Still wanted
 
 | Placeholder file | Where it appears | What to supply |
 |---|---|---|
-| `ph-logo-westlake-boys.svg` etc | Home, New for 2027 cards | Clean crest/logo for each of the four schools, square, transparent PNG or SVG |
 | `ph-logo-smales-farm.svg` | Home, supporter strip | Smales Farm logo, horizontal, transparent |
 | `ph-brett-hollister.svg` | About, board | Brett Hollister headshot, square |
 | `ph-dale-viljoen.svg` | About, operations | Dale Viljoen headshot, square |
