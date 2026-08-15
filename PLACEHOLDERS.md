@@ -27,13 +27,14 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
 ## Logos in place
 
 - Supporter strip: `smales-farm.png` (supplied by Will 15 Aug),
-  `westlake-boys.png` (from westlake.ibcdn.nz/img/wbhs-logo.png, cropped to the crest
-  because the wordmark in that file is white and disappears on a light background;
-  ask Westlake for a dark-text version if the full lockup is wanted) and
+  `westlake-boys.png` (the full lockup from westlake.ibcdn.nz/img/wbhs-logo.png; the
+  wordmark in the source file is white and vanished on the light strip, so the text
+  side was recoloured to the brand ink. The crest is untouched. Swap in an official
+  dark-text version if Westlake supplies one) and
   `caivo.png` (CAIVO Clear TIGHT, brand folder in Drive). All greyscale at rest.
-- School cards: `westlake-boys-crest.png`, `rosmini-crest.png`, `carmel-crest.png`
+- School cards: `westlake-girls-crest.png`, `rosmini-crest.png`, `carmel-crest.png`
   in `images/logos/`, cut from the Y12 assembly deck (FINAL) media with transparent
-  backgrounds. Westlake Girls uses the Boys crest at Will's direction (15 Aug).
+  backgrounds. Both Westlake cards use the Girls crest at Will's direction (15 Aug).
 
 ## Still wanted
 

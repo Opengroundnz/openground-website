@@ -20,7 +20,7 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v19.
+- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v20.
 - Home page order (Will, 15 Aug): hero, ticker, track-record stats (3), testimonials
   (no photo), the year as a mini timeline (`.steps--mini .steps--terms`), the office
   (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (real
