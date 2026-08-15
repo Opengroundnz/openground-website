@@ -113,9 +113,9 @@ See PLACEHOLDERS.md for the full slot-by-slot map. Two rules learned the hard wa
 
 1. **Bill Smale tribute wording** (about.html): must have Will's explicit sign-off
    before merge. Do not publish anything about Bill without it.
-2. **Headshots**: Brett, Dale and Adam supplied 15 Aug and in place. Only the Smale
-   family trustee seat is still a placeholder, pending the name. Dale's and Adam's
-   photos were placed in the order Will listed them and are worth a second look.
+2. **Headshots**: Brett, Dale and Adam supplied 15 Aug and in place, with Dale and
+   Adam confirmed the right way round. Only the Smale family trustee seat is still a
+   placeholder, pending the name. Brett's file is 300x300, softer than the rest.
 3. **Remaining link todos**: `olly-chargergogo` on success-stories.html (the other
    eight chips were wired 15 Aug) and `google-form-2027` on get-involved.html (the
    2027 application Google Form).

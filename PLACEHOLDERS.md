@@ -11,7 +11,7 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 | Home, the year timeline | `session-whiteboard.jpg` | OG, restored from git at Will's request 15 Aug |
 | About, board + operations | `will-montague-brown.jpg` | Will's Profile Zoomed.jpg (Desktop), supplied 15 Aug |
 | About, board | `brett-hollister.jpg` | supplied 15 Aug (300x300, smaller than the others; ask for a larger file if it looks soft) |
-| About, operations | `dale-viljoen.jpg`, `adam-bone.jpg` | supplied 15 Aug. **Order assumed from the order Will listed them; confirm which is which before merge.** Dale's is black and white as supplied |
+| About, operations | `dale-viljoen.jpg`, `adam-bone.jpg` | supplied 15 Aug, confirmed by Will: Dale wears glasses, Adam's is the black and white studio portrait |
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
 | For Students, Year 12 Term 2 | `mentor-conversation.jpg` | Supplied by Will 15 Aug, student and mentor one-on-one |
 | For Students, Year 12 Term 3 | `speaker-presenting.jpg` | A7402040 original, 4:3 crop chosen by Will 15 Aug |
