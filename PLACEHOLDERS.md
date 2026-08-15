@@ -13,7 +13,7 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
 | For Students, Year 12 Term 2 | `mentor-conversation.jpg` | Supplied by Will 15 Aug, student and mentor one-on-one |
 | For Students, Year 12 Term 3 | `speaker-presenting.jpg` | A7402040 original, 4:3 crop chosen by Will 15 Aug |
-| For Students, Year 12 Term 4 | `showcase-panel.jpg` + `showcase-crowd.jpg` | The deck's two genuine Showcase Night shots; the third image tried on 15 Aug was an assembly screenshot and was dropped |
+| For Students, Year 12 Term 4 | `showcase-speaker.jpg` + `showcase-crowd.jpg` | Will speaking at Showcase Night, and the networking after. Both from the Y12 assembly deck. The Polo panel shot was tried and rejected 15 Aug |
 | For Students, Year 13 steps 1-5 | `y13-start-learning.jpg`, `y13-mentorship.jpg`, `y13-guest-speakers.jpg`, `y13-dragons-den.jpg`, `y13-go-to-market.jpg` | Steps 1-4 are the photos freed from the old Webflow SVG borders; step 5 is the live site's notebook composition rebuilt on Pavlova |
 | About, story column | `logo-glass.jpg`, `session-working.jpg` | the logo on glass, OG-3 (the exterior shot came off About 15 Aug; it lives on home now) |
 | Get Involved, left rail | `worksheet-bw.jpg` | OG, black and white session sheet detail |
@@ -51,6 +51,9 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
   highlight reel, follow the `HIGHLIGHT REEL` comment in `index.html`.
 - **Success story links:** wired to real URLs on 15 Aug (LinkedIn x4, The Next Something,
   CAIVO, Clean Properties, WriteWise). Only `data-todo="olly-chargergogo"` remains.
+  Two were corrected after Will checked them: the agency is **thenextsomething.co**
+  (not nextsomething.co, which does not resolve) and Olly has two LinkedIn profiles,
+  the correct one is `olly-linton-9014aa268` (the ChargerGoGo founder one).
 - **Google Form (2027 applications):** `data-todo="google-form-2027"` on get-involved.html,
   inside the Student branch callout. Drop the real Google Form URL in.
 - **Photography style:** per the brand style guide, photos should be natural, eye level,

@@ -810,7 +810,15 @@ select.input {
 }
 .checkgroup { border: 0; padding: 0; margin: 0 0 1.4rem; }
 .checkgroup legend { padding: 0; }
-.checkgroup .check { margin: 0.6rem 0; }
+/* .field label sets display:block, which would flatten these rows. */
+.checkgroup .check {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 0.7rem;
+  font-weight: 400;
+}
+.checkgroup .check input { margin-top: 0; }
 @media (max-width: 36em) {
   .persona-picker { grid-template-columns: 1fr; }
   .persona-picker--2 { grid-template-columns: repeat(2, 1fr); }

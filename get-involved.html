@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/og.css?v=15"/>
+<link rel="stylesheet" href="/assets/og.css?v=16"/>
 <link rel="shortcut icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff962b061cf08992244a4_logo-ico.png"/>
 <link rel="apple-touch-icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff9659d986732d4b8c411_logo-webclip.png"/>
 </head>
@@ -37,7 +37,7 @@
     <div class="container">
       <p class="eyebrow">Get involved</p>
       <h1 class="display">Start here.</h1>
-      <p class="lead measure">Students, mentors, partners. Two minutes, one form, and we take it from there.</p>
+      <p class="lead measure">Students and supporters. Tell us which one you are, and we take it from there.</p>
     </div>
   </section>
 
@@ -49,10 +49,10 @@
         <div class="rv">
           <h2 class="h3">Students: what happens next</h2>
           <ol class="steps mt-2">
-            <li><strong>Register your interest</strong><span>This form. Two minutes.</span></li>
-            <li><strong>Application details by email</strong><span>Sent to you and your caregiver.</span></li>
-            <li><strong>A short video application</strong><span>Your business idea, and why you should get a place.</span></li>
+            <li><strong>Apply, or register your interest</strong><span>Applying for Year 12 in 2027 goes through the application form. Anything else, use the form here.</span></li>
+            <li><strong>Your idea and a short video</strong><span>What you want to build, and why you should get a place. No polish needed.</span></li>
             <li><strong>Hear back in Term 4</strong><span>Accepted students are notified and invoiced on acceptance.</span></li>
+            <li><strong>The fee</strong><span>$1,500 for the year on acceptance. Limited scholarships for genuine financial hardship, evidence requested.</span></li>
           </ol>
 
           <div class="frame frame--43 mt-3">
@@ -82,8 +82,22 @@
 
             <div data-og-branch="student" hidden>
               <div class="callout">
-                <p class="small mb-0"><strong class="fw-head">Applying for the Year 12, 2027 cohort?</strong> Applications go through our application form: <a class="link-plain" href="#" data-todo="google-form-2027">apply here</a>. If not, fill in your details below.</p>
+                <h3 class="h4 mb-0">Applying for the Year 12, 2027 cohort?</h3>
+                <p class="small mt-1">Applications go through our application form. It asks for your business idea and a short video on why you should get a place.</p>
+                <a class="btn btn--primary" href="#" data-todo="google-form-2027">Apply for 2027 <span class="arr">&rarr;</span></a>
+                <p class="small muted mt-2 mb-0">Not applying for 2027? Fill in your details below and we will be in touch.</p>
               </div>
+            </div>
+
+            <div data-og-branch="supporter" hidden>
+              <fieldset class="field checkgroup">
+                <legend class="field__label">I would like to help as... <span class="muted fw-normal">tick all that apply</span></legend>
+                <label class="check"><input type="checkbox" name="Support-as" value="Mentor"/><span>A mentor</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="Guest Speaker"/><span>A guest speaker</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="Partner or Sponsor"/><span>A partner or sponsor</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="School"/><span>A school</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="Other"/><span>Something else</span></label>
+              </fieldset>
             </div>
 
             <div class="grid-2 grid-2--tight">
@@ -138,20 +152,13 @@
                 <input class="input" maxlength="256" name="Caregiver-Email" data-name="Caregiver Email" type="email" id="Caregiver-Email"/>
               </div>
               <div class="field">
-                <label for="Business-Idea">Your business idea, if you have one</label>
-                <textarea id="Business-Idea" name="Business-Idea" maxlength="5000" placeholder="No idea yet is completely fine." class="input"></textarea>
+                <label for="Business-Idea">Your business idea</label>
+                <p class="hint">It can change later. A rough idea, or a few, is fine.</p>
+                <textarea id="Business-Idea" name="Business-Idea" maxlength="5000" placeholder="What you want to build." class="input"></textarea>
               </div>
             </div>
 
             <div data-og-branch="supporter" hidden>
-              <fieldset class="field checkgroup">
-                <legend class="field__label">How would you like to support? Tick all that apply.</legend>
-                <label class="check"><input type="checkbox" name="Support-as" value="Mentor"/><span>Mentor</span></label>
-                <label class="check"><input type="checkbox" name="Support-as" value="Guest Speaker"/><span>Guest speaker</span></label>
-                <label class="check"><input type="checkbox" name="Support-as" value="Partner or Sponsor"/><span>Partner or sponsor</span></label>
-                <label class="check"><input type="checkbox" name="Support-as" value="School"/><span>School</span></label>
-                <label class="check"><input type="checkbox" name="Support-as" value="Other"/><span>Other</span></label>
-              </fieldset>
               <div class="field">
                 <label for="Experience">Your experience and career</label>
                 <textarea id="Experience" name="Experience" maxlength="5000" placeholder="What you have done in business, and what you do now." class="input"></textarea>
