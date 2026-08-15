@@ -10,6 +10,8 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 | Home, the office | `bhive-exterior.jpg` + `bhive-staircase.jpg` | The Y12 assembly deck |
 | Home, the year timeline | `session-whiteboard.jpg` | OG, restored from git at Will's request 15 Aug |
 | About, board + operations | `will-montague-brown.jpg` | Will's Profile Zoomed.jpg (Desktop), supplied 15 Aug |
+| About, board | `brett-hollister.jpg` | supplied 15 Aug (300x300, smaller than the others; ask for a larger file if it looks soft) |
+| About, operations | `dale-viljoen.jpg`, `adam-bone.jpg` | supplied 15 Aug. **Order assumed from the order Will listed them; confirm which is which before merge.** Dale's is black and white as supplied |
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
 | For Students, Year 12 Term 2 | `mentor-conversation.jpg` | Supplied by Will 15 Aug, student and mentor one-on-one |
 | For Students, Year 12 Term 3 | `speaker-presenting.jpg` | A7402040 original, 4:3 crop chosen by Will 15 Aug |
@@ -41,9 +43,6 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
 | Placeholder file | Where it appears | What to supply |
 |---|---|---|
 | `ph-logo-smales-farm.svg` | Home, supporter strip | Smales Farm logo, horizontal, transparent |
-| `ph-brett-hollister.svg` | About, board | Brett Hollister headshot, square |
-| `ph-dale-viljoen.svg` | About, operations | Dale Viljoen headshot, square |
-| `ph-adam-bone.svg` | About, operations | Adam Bone headshot, square |
 | `ph-smale-seat.svg` | (unused until named) | Smale family trustee headshot, square |
 | (no placeholder, nice-to-have) | For Students, Term 4 | A real Showcase Night or prize giving photo with a full room |
 | (no placeholder, nice-to-have) | About, story column | A posed cohort group shot |
