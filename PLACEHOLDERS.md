@@ -42,7 +42,6 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
 
 | Placeholder file | Where it appears | What to supply |
 |---|---|---|
-| `ph-logo-smales-farm.svg` | Home, supporter strip | Smales Farm logo, horizontal, transparent |
 | `ph-smale-seat.svg` | (unused until named) | Smale family trustee headshot, square |
 | (no placeholder, nice-to-have) | For Students, Term 4 | A real Showcase Night or prize giving photo with a full room |
 | (no placeholder, nice-to-have) | About, story column | A posed cohort group shot |
@@ -63,5 +62,5 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
   inside the Student branch callout. Drop the real Google Form URL in. This is the last
   placeholder on the site.
 - **Photography style:** per the brand style guide, photos should be natural, eye level,
-  soft light, and work in black and white. Portraits render greyscale on the site
-  automatically (colour returns on hover).
+  soft light, and work in black and white. Portraits now render in full colour;
+  Bill's tribute portrait is the one held in black and white (Will, 15 Aug).
