@@ -11,12 +11,12 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 | Home, the year timeline | `session-whiteboard.jpg` | OG, restored from git at Will's request 15 Aug |
 | About, board + operations | `will-montague-brown.jpg` | Will's Profile Zoomed.jpg (Desktop), supplied 15 Aug |
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
-| For Students, Year 12 Term 2 | `mentor-support.jpg` | OG-5, one-on-one help at the desk |
+| For Students, Year 12 Term 2 | `mentor-conversation.jpg` | Supplied by Will 15 Aug, student and mentor one-on-one |
 | For Students, Year 12 Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
-| For Students, Year 12 Term 4 | `student-pitch.jpg` | A7402040, pitching to a full room |
-| For Students, Year 13 steps 1-5 | `student-writing.jpg`, `mentor-support.jpg`, `guest-speaker-2.jpg`, `student-pitch.jpg`, `session-working.jpg` | OG-2, OG-5, OG-7, A7402040, OG-3 |
+| For Students, Year 12 Term 4 | `showcase-panel.jpg` + `showcase-speaker.jpg` + `showcase-crowd.jpg` | Showcase Night trio from the Y12 assembly deck |
+| For Students, Year 13 steps 1-5 | `y13-start-learning.jpg`, `y13-mentorship.jpg`, `y13-guest-speakers.jpg`, `y13-dragons-den.jpg`, `y13-go-to-market.jpg` | Steps 1-4 are the photos freed from the old Webflow SVG borders; step 5 is the live site's notebook composition rebuilt on Pavlova |
 | For Students, joining | `student-writing.jpg` | OG-2, student working through a session sheet |
-| About, story column | `bhive-exterior.jpg`, `logo-glass.jpg`, `session-working.jpg` | the building, the logo on glass, OG-3 |
+| About, story column | `logo-glass.jpg`, `session-working.jpg` | the logo on glass, OG-3 (the exterior shot came off About 15 Aug; it lives on home now) |
 | Get Involved, left rail | `worksheet-bw.jpg` | OG, black and white session sheet detail |
 
 Removed in the August 2026 passes because they duplicated better frames of the same
