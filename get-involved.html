@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/og.css?v=14"/>
+<link rel="stylesheet" href="/assets/og.css?v=15"/>
 <link rel="shortcut icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff962b061cf08992244a4_logo-ico.png"/>
 <link rel="apple-touch-icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff9659d986732d4b8c411_logo-webclip.png"/>
 </head>
@@ -49,9 +49,9 @@
         <div class="rv">
           <h2 class="h3">Students: what happens next</h2>
           <ol class="steps mt-2">
-            <li><strong>Register your interest</strong><span>This form. Two minutes, no business idea needed.</span></li>
+            <li><strong>Register your interest</strong><span>This form. Two minutes.</span></li>
             <li><strong>Application details by email</strong><span>Sent to you and your caregiver.</span></li>
-            <li><strong>A short video application</strong><span>Who you are and what you want to build.</span></li>
+            <li><strong>A short video application</strong><span>Your business idea, and why you should get a place.</span></li>
             <li><strong>Hear back in Term 4</strong><span>Accepted students are notified and invoiced on acceptance.</span></li>
           </ol>
 
@@ -60,8 +60,8 @@
           </div>
 
           <div class="card mt-3">
-            <h3 class="h4">Mentors and partners</h3>
-            <p class="small muted">Tell us what you have built and where you can help. We select mentors based on the student businesses each year, and every mentor is background checked.</p>
+            <h3 class="h4">Supporters</h3>
+            <p class="small muted">Mentors, guest speakers, partners, sponsors, schools: tell us what you have built and where you can help. We select mentors based on the student businesses each year, and every mentor is background checked.</p>
             <p class="small mb-0">Prefer email? <a href="mailto:admin@openground.co.nz" class="link-plain">admin@openground.co.nz</a></p>
           </div>
         </div>
@@ -73,22 +73,17 @@
             <p class="honeypot"><label>Leave this empty: <input name="bot-field"/></label></p>
 
             <div class="field">
-              <label for="Interest">I am a...</label>
-              <div class="persona-picker" aria-hidden="true">
-                <button type="button" class="persona-btn" data-value="Student">Student</button>
-                <button type="button" class="persona-btn" data-value="Mentor">Mentor</button>
-                <button type="button" class="persona-btn" data-value="Partner or Sponsor">Partner</button>
+              <p class="field__label" id="role-label">I would like to be a...</p>
+              <div class="persona-picker persona-picker--2" role="radiogroup" aria-labelledby="role-label">
+                <label class="persona-btn"><input type="radio" name="I-would-like-to-be" value="Student" required/>Student</label>
+                <label class="persona-btn"><input type="radio" name="I-would-like-to-be" value="Supporter" required/>Supporter</label>
               </div>
-              <select id="Interest" name="How-would-you-like-to-be-involved" data-name="How would you like to be involved?" class="input" required>
-                <option value="" disabled selected>Select one</option>
-                <option>Student</option>
-                <option>Parent or Caregiver</option>
-                <option>Mentor</option>
-                <option>Guest Speaker</option>
-                <option>Partner or Sponsor</option>
-                <option>School</option>
-                <option>Other</option>
-              </select>
+            </div>
+
+            <div data-og-branch="student" hidden>
+              <div class="callout">
+                <p class="small mb-0"><strong class="fw-head">Applying for the Year 12, 2027 cohort?</strong> Applications go through our application form: <a class="link-plain" href="#" data-todo="google-form-2027">apply here</a>. If not, fill in your details below.</p>
+              </div>
             </div>
 
             <div class="grid-2 grid-2--tight">
@@ -148,20 +143,22 @@
               </div>
             </div>
 
-            <div data-og-branch="mentor" hidden>
+            <div data-og-branch="supporter" hidden>
+              <fieldset class="field checkgroup">
+                <legend class="field__label">How would you like to support? Tick all that apply.</legend>
+                <label class="check"><input type="checkbox" name="Support-as" value="Mentor"/><span>Mentor</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="Guest Speaker"/><span>Guest speaker</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="Partner or Sponsor"/><span>Partner or sponsor</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="School"/><span>School</span></label>
+                <label class="check"><input type="checkbox" name="Support-as" value="Other"/><span>Other</span></label>
+              </fieldset>
               <div class="field">
                 <label for="Experience">Your experience and career</label>
                 <textarea id="Experience" name="Experience" maxlength="5000" placeholder="What you have done in business, and what you do now." class="input"></textarea>
               </div>
-              <div class="grid-2 grid-2--tight">
-                <div class="field">
-                  <label for="LinkedIn">LinkedIn URL</label>
-                  <input class="input" maxlength="300" name="LinkedIn" type="url" id="LinkedIn" placeholder="https://www.linkedin.com/in/..."/>
-                </div>
-                <div class="field">
-                  <label for="Age">Age</label>
-                  <input class="input" name="Age" type="number" min="16" max="99" id="Age"/>
-                </div>
+              <div class="field">
+                <label for="LinkedIn">LinkedIn URL <span class="muted fw-normal">(optional)</span></label>
+                <input class="input" maxlength="300" name="LinkedIn" type="url" id="LinkedIn" placeholder="https://www.linkedin.com/in/..."/>
               </div>
             </div>
 

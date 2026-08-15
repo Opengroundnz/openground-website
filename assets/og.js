@@ -91,33 +91,22 @@
     });
   }
 
-  /* Get Involved: persona chips sync with the real select, branches show/hide */
-  var interest = document.getElementById("Interest");
-  if (interest) {
-    var chips = document.querySelectorAll(".persona-btn");
+  /* Get Involved: role radios drive the branches */
+  var roleRadios = document.querySelectorAll('input[name="I-would-like-to-be"]');
+  if (roleRadios.length) {
     var branches = document.querySelectorAll("[data-og-branch]");
-    var studentRoles = ["Student", "Parent or Caregiver"];
-    var mentorRoles = ["Mentor", "Guest Speaker"];
     var applyBranches = function () {
-      var v = interest.value;
+      var v = "";
+      roleRadios.forEach(function (r) { if (r.checked) v = r.value.toLowerCase(); });
       branches.forEach(function (b) {
-        var kind = b.getAttribute("data-og-branch");
-        var show =
-          (kind === "student" && studentRoles.indexOf(v) !== -1) ||
-          (kind === "mentor" && mentorRoles.indexOf(v) !== -1);
-        b.hidden = !show;
+        b.hidden = b.getAttribute("data-og-branch") !== v;
       });
-      chips.forEach(function (c) {
-        c.classList.toggle("is-active", c.getAttribute("data-value") === v);
+      document.querySelectorAll(".persona-btn").forEach(function (c) {
+        var input = c.querySelector("input");
+        c.classList.toggle("is-active", !!(input && input.checked));
       });
     };
-    chips.forEach(function (c) {
-      c.addEventListener("click", function () {
-        interest.value = c.getAttribute("data-value");
-        applyBranches();
-      });
-    });
-    interest.addEventListener("change", applyBranches);
+    roleRadios.forEach(function (r) { r.addEventListener("change", applyBranches); });
     applyBranches();
   }
 })();

@@ -12,16 +12,15 @@ To replace one: drop the real photo into `images/`, then swap the `src` in the p
 | About, board + operations | `will-montague-brown.jpg` | Will's Profile Zoomed.jpg (Desktop), supplied 15 Aug |
 | For Students, Year 12 Term 1 | `session-teaching.jpg` | OG-8, Steve talking the cohort through a session |
 | For Students, Year 12 Term 2 | `mentor-conversation.jpg` | Supplied by Will 15 Aug, student and mentor one-on-one |
-| For Students, Year 12 Term 3 | `guest-speaker.jpg` | OG-6, guest speaker with students |
-| For Students, Year 12 Term 4 | `showcase-panel.jpg` + `showcase-speaker.jpg` + `showcase-crowd.jpg` | Showcase Night trio from the Y12 assembly deck |
+| For Students, Year 12 Term 3 | `speaker-presenting.jpg` | A7402040 original, 4:3 crop chosen by Will 15 Aug |
+| For Students, Year 12 Term 4 | `showcase-panel.jpg` + `showcase-crowd.jpg` | The deck's two genuine Showcase Night shots; the third image tried on 15 Aug was an assembly screenshot and was dropped |
 | For Students, Year 13 steps 1-5 | `y13-start-learning.jpg`, `y13-mentorship.jpg`, `y13-guest-speakers.jpg`, `y13-dragons-den.jpg`, `y13-go-to-market.jpg` | Steps 1-4 are the photos freed from the old Webflow SVG borders; step 5 is the live site's notebook composition rebuilt on Pavlova |
-| For Students, joining | `student-writing.jpg` | OG-2, student working through a session sheet |
 | About, story column | `logo-glass.jpg`, `session-working.jpg` | the logo on glass, OG-3 (the exterior shot came off About 15 Aug; it lives on home now) |
 | Get Involved, left rail | `worksheet-bw.jpg` | OG, black and white session sheet detail |
 
 Removed in the August 2026 passes because they duplicated better frames of the same
 room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.jpg`,
-`students-smiling.jpg`. They are still in git history if any are wanted back
+`students-smiling.jpg`, `guest-speaker.jpg`, `student-writing.jpg`, `showcase-speaker.jpg`. They are still in git history if any are wanted back
 (`session-whiteboard.jpg` was restored that way on 15 Aug).
 `OG-7.jpg` was not used: it is the same moment as `OG-6.jpg`, which is the warmer frame.
 
@@ -50,8 +49,10 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
 
 - **Hero video (home):** vertical placeholder in the hero. When Adam delivers the
   highlight reel, follow the `HIGHLIGHT REEL` comment in `index.html`.
-- **Success story links:** the LinkedIn / company chips on `success-stories.html` are `#`
-  placeholders tagged with `data-todo` attributes. Supply the URLs and drop them in.
+- **Success story links:** wired to real URLs on 15 Aug (LinkedIn x4, The Next Something,
+  CAIVO, Clean Properties, WriteWise). Only `data-todo="olly-chargergogo"` remains.
+- **Google Form (2027 applications):** `data-todo="google-form-2027"` on get-involved.html,
+  inside the Student branch callout. Drop the real Google Form URL in.
 - **Photography style:** per the brand style guide, photos should be natural, eye level,
   soft light, and work in black and white. Portraits render greyscale on the site
   automatically (colour returns on hover).

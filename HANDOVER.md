@@ -1,7 +1,7 @@
 # Website refresh handover (branch: jarvis/website-refresh)
 
 Context for continuing this work in a new session. Written 6 Aug 2026 after the
-full UI rebuild, last updated 14 Aug 2026. Everything needed to continue lives in
+full UI rebuild, last updated 15 Aug 2026. Everything needed to continue lives in
 this file, PLACEHOLDERS.md, and the code.
 
 ## State
@@ -11,21 +11,22 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 - `assets/og.css`: the design system. Brand tokens from the Openground Style Guide v1.0:
   Hokey Pokey `#F5BE57`, Vegemite `#191919`, Pavlova `#F2E8DD`, Lupin Purple `#A574BD`,
   Blue Pinkgill `#3D6AF6`. Epilogue for headlines, Poppins for body. Playful editorial
-  feel: hard offset shadows (`--shadow-pop`), colour-blocked sections, B&W portraits that
-  colour on hover, reveal-on-scroll (`.rv` + IntersectionObserver with a 1.6s safety
+  feel: hard offset shadows (`--shadow-pop`), colour-blocked sections, full-colour portraits
+  (Bill's tribute is the one held in black and white), reveal-on-scroll (`.rv` + IntersectionObserver with a 1.6s safety
   fallback), a marquee ticker, mobile off-canvas nav.
 - `assets/og.js`: nav, reveals, quote rotator, Year 12/13 switch, Get Involved form
-  branching (persona quick-pick buttons sync the real `#Interest` select).
+  branching (role radios `I-would-like-to-be` toggle the student/supporter branches).
 - `assets/marks/`: hand-authored brand SVGs (ring, burst, asterisk, spark, scribble,
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v12.
+- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v15.
 - Home page order (Will, 15 Aug): hero, ticker, track-record stats (3), testimonials
   (no photo), the year as a mini timeline (`.steps--mini .steps--terms`), the office
-  (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (school
-  logo placeholders), mentors/partners, CTA band, supporter strip (`.sponsor-row`,
-  greyscale logos). All general CTAs read "Get involved".
+  (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (real
+  school crests), supporter strip (`.sponsor-row`, big greyscale centred logos),
+  CTA band. The mentors/partners cards were removed at Will's direction on 15 Aug.
+  All general CTAs read "Get involved".
 - **No inline `style=` attributes.** They were all moved into named classes on
   14 Aug; keep it that way, it is the main thing that stopped the markup reading
   as machine-generated.
@@ -40,8 +41,11 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 
 1. **Netlify form contract** on get-involved.html: form `name="contact"`,
    `data-netlify="true"`, honeypot `bot-field`, hidden `form-name` input, POST to
-   `/thank-you`, and the exact existing field names. Break any of these and
-   submissions silently vanish. Submissions email admin@openground.co.nz.
+   `/thank-you`. Break any of these and submissions silently vanish. Submissions
+   email admin@openground.co.nz. Fields were restructured at Will's direction on
+   15 Aug: role radios `I-would-like-to-be` (Student/Supporter), supporter
+   checkboxes `Support-as` (tick all that apply), the old `How-would-you-like-to-be-involved`
+   select and `Age` are gone. Netlify re-registers fields on deploy.
 2. **Pretty URLs**: internal links are extensionless (`/about`); `netlify.toml`
    carries the redirects. Any new page needs netlify.toml + sitemap.xml updates.
 3. **No refund messaging anywhere. Hard rule.** No "Term 1 free" (policy died 29 Jul 2026).
@@ -53,8 +57,11 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 
 ## Content decisions already applied (do not revert)
 
-- $1,500 fee public, invoiced on acceptance. Scholarship line (approved wording):
-  "Scholarships are available. If cost is the only thing stopping you, come and talk to us."
+- $1,500 fee is mentioned inside the small "There is an application process." card
+  (no big price block; Will killed it 15 Aug). Scholarship wording, per Will 15 Aug:
+  limited, for genuine financial hardship, evidence requested.
+- Applying requires a business idea (it can change in Term 1). FAQ updated 15 Aug;
+  do not restore "no idea needed" to application copy (registering interest is different).
 - Dragon's Den removed from the Year 12 framing (5 Aug 2026 decision; it belongs to
   the separate in-school Westlake programme).
 - Year 13: "runs as a course during school time... details announced during 2027".
@@ -89,9 +96,11 @@ skipped heading levels, a flat type scale, and low-contrast muted text on dark.
 
 See PLACEHOLDERS.md for the full slot-by-slot map. Two rules learned the hard way:
 
-- **Year 12 uses photography, Year 13 keeps the original Webflow illustrations.**
-  A photo swap on Year 13 was tried on 14 Aug and Will rejected it; it was reverted
-  in commit 2ae477d. Do not redo it without asking.
+- **Both years now use photography.** Year 13's old "illustrations" were photos
+  wrapped in border-drawing SVGs; on 15 Aug Will asked for full-bleed images, so the
+  embedded photos were extracted (`images/y13-*.jpg`) and Go to Market uses the live
+  site's notebook composition. (The 14 Aug generic-photo swap he rejected is a
+  different thing; these are the same artworks, borderless.)
 - Prefer variety of scale and subject over repeated wide shots of the same room.
 
 ## Open items awaiting Will
@@ -101,9 +110,9 @@ See PLACEHOLDERS.md for the full slot-by-slot map. Two rules learned the hard wa
 2. **Headshots still needed**: Brett Hollister, Dale Viljoen, Adam Bone (square),
    plus the Smale family trustee when named. Everything else is real photography now.
    A genuine Showcase Night / prize giving shot would improve Year 12 Term 4.
-3. **Alumni link URLs** on success-stories.html: chips are `#` with `data-todo`
-   attributes (olly-linkedin, olly-clean-properties, olly-chargergogo, polo-linkedin,
-   polo-portfolio, leon-linkedin, leon-writewise, will-linkedin, will-caivo).
+3. **Remaining link todos**: `olly-chargergogo` on success-stories.html (the other
+   eight chips were wired 15 Aug) and `google-form-2027` on get-involved.html (the
+   2027 application Google Form).
 4. **Sessions line**: "Monday to Thursday, 3:30 to 5pm" is on the home page and the
    For Students FAQ; Will to confirm before merge.
 5. **Highlight reel**: the home hero holds a labelled vertical placeholder. When Adam
