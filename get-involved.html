@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/og.css?v=16"/>
+<link rel="stylesheet" href="/assets/og.css?v=19"/>
 <link rel="shortcut icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff962b061cf08992244a4_logo-ico.png"/>
 <link rel="apple-touch-icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff9659d986732d4b8c411_logo-webclip.png"/>
 </head>
@@ -59,11 +59,6 @@
             <img src="/images/worksheet-bw.jpg" alt="A student filling in an Openground session sheet" loading="lazy"/>
           </div>
 
-          <div class="card mt-3">
-            <h3 class="h4">Supporters</h3>
-            <p class="small muted">Mentors, guest speakers, partners, sponsors, schools: tell us what you have built and where you can help. We select mentors based on the student businesses each year, and every mentor is background checked.</p>
-            <p class="small mb-0">Prefer email? <a href="mailto:admin@openground.co.nz" class="link-plain">admin@openground.co.nz</a></p>
-          </div>
         </div>
 
         <!-- Form -->
@@ -117,8 +112,8 @@
                 <input class="input" maxlength="256" name="Email" data-name="Email" type="email" id="Email" required/>
               </div>
               <div class="field">
-                <label for="Phone">Phone <span class="muted fw-normal">(optional)</span></label>
-                <input class="input" maxlength="40" name="Phone" data-name="Phone" type="tel" id="Phone"/>
+                <label for="Phone">Phone</label>
+                <input class="input" maxlength="40" name="Phone" data-name="Phone" type="tel" id="Phone" required/>
               </div>
             </div>
 
@@ -126,35 +121,23 @@
               <div class="grid-2 grid-2--tight">
                 <div class="field">
                   <label for="School">Your school</label>
-                  <select id="School" name="School" class="input">
-                    <option value="" disabled selected>Select your school</option>
-                    <option>Westlake Boys High School</option>
-                    <option>Westlake Girls High School</option>
-                    <option>Rosmini College</option>
-                    <option>Carmel College</option>
-                    <option>Other</option>
-                  </select>
+                  <input class="input" maxlength="256" name="School" data-name="School" type="text" id="School" placeholder="Which school you go to"/>
                 </div>
                 <div class="field">
-                  <label for="Year-Level">Your year level in 2026</label>
+                  <label for="Year-Level">Your current year level</label>
                   <select id="Year-Level" name="Year-Level" class="input">
                     <option value="" disabled selected>Select your year</option>
+                    <option>Year 9</option>
+                    <option>Year 10</option>
                     <option>Year 11</option>
                     <option>Year 12</option>
                     <option>Year 13</option>
-                    <option>Other</option>
                   </select>
                 </div>
               </div>
               <div class="field">
-                <label for="Caregiver-Email">Caregiver email</label>
-                <p class="hint">Application details go to you both.</p>
-                <input class="input" maxlength="256" name="Caregiver-Email" data-name="Caregiver Email" type="email" id="Caregiver-Email"/>
-              </div>
-              <div class="field">
-                <label for="Business-Idea">Your business idea</label>
-                <p class="hint">It can change later. A rough idea, or a few, is fine.</p>
-                <textarea id="Business-Idea" name="Business-Idea" maxlength="5000" placeholder="What you want to build." class="input"></textarea>
+                <label for="Why-Openground">Why you would like to do Openground</label>
+                <textarea id="Why-Openground" name="Why-Openground" maxlength="5000" placeholder="What you want to get out of it." class="input"></textarea>
               </div>
             </div>
 
@@ -164,8 +147,8 @@
                 <textarea id="Experience" name="Experience" maxlength="5000" placeholder="What you have done in business, and what you do now." class="input"></textarea>
               </div>
               <div class="field">
-                <label for="LinkedIn">LinkedIn URL <span class="muted fw-normal">(optional)</span></label>
-                <input class="input" maxlength="300" name="LinkedIn" type="url" id="LinkedIn" placeholder="https://www.linkedin.com/in/..."/>
+                <label for="LinkedIn">LinkedIn URL</label>
+                <input class="input" maxlength="300" name="LinkedIn" type="url" id="LinkedIn" placeholder="https://www.linkedin.com/in/..." data-req/>
               </div>
             </div>
 

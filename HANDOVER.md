@@ -20,7 +20,7 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v15.
+- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v19.
 - Home page order (Will, 15 Aug): hero, ticker, track-record stats (3), testimonials
   (no photo), the year as a mini timeline (`.steps--mini .steps--terms`), the office
   (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (real
@@ -44,8 +44,14 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
    `/thank-you`. Break any of these and submissions silently vanish. Submissions
    email admin@openground.co.nz. Fields were restructured at Will's direction on
    15 Aug: role radios `I-would-like-to-be` (Student/Supporter), supporter
-   checkboxes `Support-as` (tick all that apply), the old `How-would-you-like-to-be-involved`
-   select and `Age` are gone. Netlify re-registers fields on deploy.
+   checkboxes `Support-as` (tick all that apply), `Why-Openground` replaces
+   `Business-Idea`, `School` is free text, `Year-Level` runs Year 9 to 13, and
+   `How-would-you-like-to-be-involved`, `Age` and `Caregiver-Email` are gone.
+   Netlify re-registers fields on deploy.
+   **Required fields inside a branch must use `data-req`, not `required`.** A
+   `required` control inside a `hidden` branch blocks submit and cannot be focused
+   to show the error, so `og.js` adds and removes `required` as branches toggle.
+   Phone and the role radios are always visible, so they carry plain `required`.
 2. **Pretty URLs**: internal links are extensionless (`/about`); `netlify.toml`
    carries the redirects. Any new page needs netlify.toml + sitemap.xml updates.
 3. **No refund messaging anywhere. Hard rule.** No "Term 1 free" (policy died 29 Jul 2026).

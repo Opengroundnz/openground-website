@@ -99,7 +99,14 @@
       var v = "";
       roleRadios.forEach(function (r) { if (r.checked) v = r.value.toLowerCase(); });
       branches.forEach(function (b) {
-        b.hidden = b.getAttribute("data-og-branch") !== v;
+        var show = b.getAttribute("data-og-branch") === v;
+        b.hidden = !show;
+        /* A required field inside a hidden branch blocks submit and cannot be
+           focused to show the message, so required only applies while visible. */
+        b.querySelectorAll("[data-req]").forEach(function (f) {
+          if (show) f.setAttribute("required", "");
+          else f.removeAttribute("required");
+        });
       });
       document.querySelectorAll(".persona-btn").forEach(function (c) {
         var input = c.querySelector("input");

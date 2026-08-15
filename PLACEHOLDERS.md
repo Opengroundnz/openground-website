@@ -26,11 +26,14 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
 
 ## Logos in place
 
-- Supporter strip: `images/logos/westlake-boys.png` (Westlake chatbot repo) and
-  `images/logos/caivo.png` (CAIVO Clear TIGHT, brand folder in Drive), greyscale at rest.
-- School cards: `westlake-boys-crest.png`, `westlake-girls-crest.png`,
-  `rosmini-crest.png`, `carmel-crest.png` in `images/logos/`, all cut from the
-  Y12 assembly deck (FINAL) media with transparent backgrounds.
+- Supporter strip: `smales-farm.png` (supplied by Will 15 Aug),
+  `westlake-boys.png` (from westlake.ibcdn.nz/img/wbhs-logo.png, cropped to the crest
+  because the wordmark in that file is white and disappears on a light background;
+  ask Westlake for a dark-text version if the full lockup is wanted) and
+  `caivo.png` (CAIVO Clear TIGHT, brand folder in Drive). All greyscale at rest.
+- School cards: `westlake-boys-crest.png`, `rosmini-crest.png`, `carmel-crest.png`
+  in `images/logos/`, cut from the Y12 assembly deck (FINAL) media with transparent
+  backgrounds. Westlake Girls uses the Boys crest at Will's direction (15 Aug).
 
 ## Still wanted
 
@@ -51,11 +54,14 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
   highlight reel, follow the `HIGHLIGHT REEL` comment in `index.html`.
 - **Success story links:** wired to real URLs on 15 Aug (LinkedIn x4, The Next Something,
   CAIVO, Clean Properties, WriteWise). Only `data-todo="olly-chargergogo"` remains.
-  Two were corrected after Will checked them: the agency is **thenextsomething.co**
-  (not nextsomething.co, which does not resolve) and Olly has two LinkedIn profiles,
-  the correct one is `olly-linton-9014aa268` (the ChargerGoGo founder one).
+  Corrected after Will checked them: the agency is **thenextsomething.co** (not
+  nextsomething.co, which does not resolve) and Olly's profile is
+  `linkedin.com/in/oliver-linton-nz` (he has several; this is the one he confirmed).
+  ChargerGoGo has closed, so that chip was removed and the present-tense mention
+  dropped from his story copy.
 - **Google Form (2027 applications):** `data-todo="google-form-2027"` on get-involved.html,
-  inside the Student branch callout. Drop the real Google Form URL in.
+  inside the Student branch callout. Drop the real Google Form URL in. This is the last
+  placeholder on the site.
 - **Photography style:** per the brand style guide, photos should be natural, eye level,
   soft light, and work in black and white. Portraits render greyscale on the site
   automatically (colour returns on hover).

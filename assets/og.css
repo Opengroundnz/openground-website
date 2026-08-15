@@ -472,21 +472,24 @@ p:last-child { margin-bottom: 0; }
 .school-card__badge {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   display: inline-block;
-  padding: 0.3rem 0.7rem;
+  padding: 0.22rem 0.6rem;
   border-radius: 999px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
+  background: var(--hokey);
 }
-.school-card:nth-child(1) .school-card__badge { background: var(--hokey); }
-.school-card:nth-child(2) .school-card__badge { background: var(--lupin); color: var(--paper); }
-.school-card:nth-child(3) .school-card__badge { background: var(--pinkgill); color: var(--paper); }
-.school-card:nth-child(4) .school-card__badge { background: var(--pavlova); }
 .school-card h3 { font-size: 1.2rem; margin: 0; }
 .school-card__logo { margin-bottom: 1rem; }
-.school-card__logo img { width: 4rem; height: 4rem; object-fit: contain; display: block; }
+.school-card__logo img {
+  width: auto;
+  height: 5.5rem;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 /* Sponsor strip: greyscale at rest, colour on hover, like the portraits. */
 .sponsor-row {
@@ -505,6 +508,8 @@ p:last-child { margin-bottom: 0; }
   transition: filter 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
 }
 .sponsor-row a:hover img, .sponsor-row img:hover { filter: none; opacity: 1; }
+/* A portrait crest next to wordmarks needs extra height to read at the same weight. */
+.sponsor-row img.sponsor-row__tall { height: clamp(5.5rem, 10vw, 8.5rem); }
 
 /* ---- Term timeline (For Students + home snapshot) ---- */
 .term {
