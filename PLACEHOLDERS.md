@@ -58,9 +58,19 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
   `linkedin.com/in/oliver-linton-nz` (he has several; this is the one he confirmed).
   ChargerGoGo has closed, so that chip was removed and the present-tense mention
   dropped from his story copy.
-- **Google Form (2027 applications):** `data-todo="google-form-2027"` on get-involved.html,
-  inside the Student branch callout. Drop the real Google Form URL in. This is the last
-  placeholder on the site.
+- **Google Form (2027):** done 28 Aug. The Student branch callout on get-involved.html now
+  links to the register-interest form (`forms.gle/udXYXjhoVX9qLUZm9`). The 2027 *application*
+  form does not exist yet, so the copy promises an emailed application later rather than an
+  application now. Swap the button through to the real application form once it is built.
+  No `data-todo` placeholders remain on the site.
 - **Photography style:** per the brand style guide, photos should be natural, eye level,
   soft light, and work in black and white. Portraits now render in full colour;
   Bill's tribute portrait is the one held in black and white (Will, 15 Aug).
+
+## Removed at the 27 Aug catch up (pre go-live)
+
+- **Supporter logo strip** ("Backed by the best", home page): pulled because Smales Farm,
+  Westlake Boys and CAIVO had not agreed to their logos being used. Logo files are still in
+  `images/logos/`; restore the section from git history once permission is in writing.
+- **Fourth trustee card** ("To Be Announced", about page): the question-mark bubble for the
+  Smale family seat. The board grid is now `grid-3`. `ph-smale-seat.svg` stays unused.
