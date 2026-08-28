@@ -50,11 +50,18 @@
         </div>
       </div>
       <div class="hero__media has-stickers">
-        <!-- HIGHLIGHT REEL: when Adam delivers the vertical reel, replace the placeholder
-             img below with the 9:16 embed, keeping this frame div:
-             <iframe src="..." title="Openground highlight reel" loading="lazy" allowfullscreen></iframe> -->
+        <!-- HIGHLIGHT REEL: Adam's vertical reel, self-hosted so there is no third-party
+             player on a page aimed at school students. preload="none" means nothing
+             downloads until someone presses play, so the 13MB file costs mobile users
+             nothing on arrival. .frame--tall already sizes and crops any direct child. -->
         <div class="frame frame--pop frame--tall frame--portrait">
-          <img src="/images/placeholders/ph-highlight-reel.svg" alt="Placeholder for the Openground highlight reel video" width="640" height="1138"/>
+          <video src="/assets/video/og-highlight-reel.mp4"
+                 poster="/images/highlight-reel-poster.jpg"
+                 width="720" height="1280"
+                 controls playsinline preload="none"
+                 title="Openground highlight reel">
+            <a href="/assets/video/og-highlight-reel.mp4">Download the Openground highlight reel</a>
+          </video>
         </div>
         <img class="sticker sticker--tr" src="/assets/marks/burst.svg" alt="" width="72" height="72"/>
         <img class="sticker sticker--bl" src="/assets/marks/arrow-loop.svg" alt="" width="84" height="84"/>

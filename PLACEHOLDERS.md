@@ -49,8 +49,13 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
 
 ## Other pending swaps
 
-- **Hero video (home):** vertical placeholder in the hero. When Adam delivers the
-  highlight reel, follow the `HIGHLIGHT REEL` comment in `index.html`.
+- **Hero video (home):** done 29 Aug. Adam's vertical reel is self-hosted at
+  `assets/video/og-highlight-reel.mp4` (720x1280, 13MB, 109s) with a poster frame at
+  `images/highlight-reel-poster.jpg`. Self-hosted rather than a YouTube embed so there is
+  no third-party player on a page aimed at school students; `preload="none"` means nothing
+  downloads until someone presses play. Source master is `OG v4.mov` (2160x3840, 607MB).
+  Re-encode from that master if a larger version is ever wanted.
+  `images/placeholders/ph-highlight-reel.svg` is now unused.
 - **Success story links:** wired to real URLs on 15 Aug (LinkedIn x4, The Next Something,
   CAIVO, Clean Properties, WriteWise). Only `data-todo="olly-chargergogo"` remains.
   Corrected after Will checked them: the agency is **thenextsomething.co** (not
