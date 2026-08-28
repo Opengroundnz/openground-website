@@ -320,6 +320,15 @@ p:last-child { margin-bottom: 0; }
   border: 0;
   object-fit: cover;
 }
+/* Video keeps its own shape. `cover` above is right for stills, which are cropped
+   to whatever frame they sit in, but a film cropped to fill its frame stays cropped
+   in fullscreen, where the browser hands it the whole landscape screen and the crop
+   reads as a zoom. `contain` looks identical inside a frame of the same ratio and
+   letterboxes correctly everywhere else. */
+.frame > video { object-fit: contain; background: var(--vegemite); }
+.frame > video:fullscreen { object-fit: contain; }
+.frame > video:-webkit-full-screen { object-fit: contain; }
+
 /* Vertical films sit at a readable width and centre in their column. */
 .frame--portrait { max-width: 22rem; margin-inline: auto; }
 .img-bw img { filter: grayscale(1) contrast(1.05); }
