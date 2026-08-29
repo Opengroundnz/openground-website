@@ -20,12 +20,11 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v20.
+- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v21.
 - Home page order (Will, 15 Aug): hero, ticker, track-record stats (3), testimonials
   (no photo), the year as a mini timeline (`.steps--mini .steps--terms`), the office
   (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (real
-  school crests), supporter strip (`.sponsor-row`, big greyscale centred logos),
-  CTA band. The mentors/partners cards were removed at Will's direction on 15 Aug.
+  school crests), CTA band. The supporter strip was pulled on 27 Aug, see below. The mentors/partners cards were removed at Will's direction on 15 Aug.
   All general CTAs read "Get involved".
 - **No inline `style=` attributes.** They were all moved into named classes on
   14 Aug; keep it that way, it is the main thing that stopped the markup reading
@@ -79,12 +78,16 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   (he floated 150+; 100+ is the conservative number used).
 - Contact address is admin@openground.co.nz everywhere (info@ is Webflow-era).
 - No "backed by Westlake" branding of Openground's own identity (5 Aug decision).
-  Exception, 15 Aug at Will's direction: the Westlake Boys crest appears in the home
-  supporter strip ("Backed by the best") alongside Smales Farm (placeholder) and
-  CAIVO. Thanking a partner is not co-branding.
+  The 15 Aug exception (a "Backed by the best" supporter strip with Westlake Boys,
+  Smales Farm and CAIVO) was **removed on 27 Aug** at the Will and Steve catch up:
+  none of the three had agreed to their logos being used. The logo files remain in
+  `images/logos/`; restore the section from git history only once permission is in
+  writing.
 - Board: Will Montague-Brown, Paul Fordham, Brett Hollister (Advancement and
-  Development Manager at Westlake Boys, appointed 2026), fourth seat held for the
-  Smale family (TBA). Operations: Steve Anderson (Programme Coordinator),
+  Development Manager at Westlake Boys, and a director of Thrive Nation and School
+  Solutions, appointed 2026). The fourth "To Be Announced" card for the Smale family
+  seat was removed on 27 Aug and the grid dropped to three columns; re-add it only
+  when there is a name. Operations: Steve Anderson (Programme Coordinator),
   Dale Viljoen (Fractional CTO), Adam Bone (Fractional CMO).
 - Verified proof stats: $20k+/month (Oliver Linton's two companies), WriteWise in
   24 schools (Leon Grootscholten, 2025), running since 2022, 1:1 mentor pairing.
@@ -116,14 +119,15 @@ See PLACEHOLDERS.md for the full slot-by-slot map. Two rules learned the hard wa
 2. **Headshots**: Brett, Dale and Adam supplied 15 Aug and in place, with Dale and
    Adam confirmed the right way round. Only the Smale family trustee seat is still a
    placeholder, pending the name. Brett's file is 300x300, softer than the rest.
-3. **Remaining link todos**: `olly-chargergogo` on success-stories.html (the other
-   eight chips were wired 15 Aug) and `google-form-2027` on get-involved.html (the
-   2027 application Google Form).
+3. **Link todos: done.** `google-form-2027` now points at the register-interest
+   Google Form (the 2027 *application* form does not exist yet, so the copy promises
+   an emailed application later). ChargerGoGo has closed, so Olly's mentions were
+   dropped from both success-stories.html and the home page card.
 4. **Sessions line**: "Monday to Thursday, 3:30 to 5pm" is on the home page and the
    For Students FAQ; Will to confirm before merge.
-5. **Highlight reel**: the home hero holds a labelled vertical placeholder. When Adam
-   delivers the reel, follow the `HIGHLIGHT REEL` comment in index.html and swap the
-   placeholder img for the 9:16 embed.
+5. **Highlight reel: done.** Adam delivered it 29 Aug. Self-hosted at
+   `assets/video/og-highlight-reel.mp4`, click to play, `object-fit: contain` so it
+   keeps its shape in fullscreen. See PLACEHOLDERS.md.
 6. Optional: TVNZ Breakfast appearance (two 2026 students, May 2026) is a strong
    proof point, currently left off pending clip rights and Will's call.
 
