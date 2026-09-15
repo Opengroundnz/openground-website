@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/og.css?v=21"/>
+<link rel="stylesheet" href="/assets/og.css?v=22"/>
 <link rel="shortcut icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff962b061cf08992244a4_logo-ico.png"/>
 <link rel="apple-touch-icon" href="/cdn.prod.website-files.com/633fe9c9687ae48762a9eb0b/633ff9659d986732d4b8c411_logo-webclip.png"/>
 </head>
@@ -51,17 +51,33 @@
       </div>
       <div class="hero__media has-stickers">
         <!-- HIGHLIGHT REEL: Adam's vertical reel, self-hosted so there is no third-party
-             player on a page aimed at school students. preload="none" means nothing
-             downloads until someone presses play, so the 13MB file costs mobile users
-             nothing on arrival. .frame--tall already sizes and crops any direct child. -->
-        <div class="frame frame--pop frame--tall frame--portrait">
+             player on a page aimed at school students. It plays itself, muted and
+             looping, and the sound button is the whole invitation to turn it up.
+             The markup stays on preload="none" with no autoplay attribute: og.js
+             starts it only once it has checked for reduced motion and Data Saver,
+             so a visitor who has asked not to be charged 13MB gets the poster and
+             the play button instead. Without JavaScript this behaves exactly as it
+             always did. .frame--tall already sizes and crops any direct child, so
+             the button carries its own position rules. -->
+        <div class="frame frame--pop frame--tall frame--portrait" data-video>
           <video src="/assets/video/og-highlight-reel.mp4"
                  poster="/images/highlight-reel-poster.jpg"
                  width="720" height="1280"
-                 controls playsinline preload="none"
+                 controls muted loop playsinline preload="none"
                  title="Openground highlight reel">
             <a href="/assets/video/og-highlight-reel.mp4">Download the Openground highlight reel</a>
           </video>
+          <button class="btn-sound is-muted" type="button" aria-label="Turn sound on">
+            <svg class="btn-sound__on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4z"/>
+              <path d="M15.5 9a4 4 0 0 1 0 6M18.2 6.6a7.5 7.5 0 0 1 0 10.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="btn-sound__off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4z"/>
+              <path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="btn-sound__text">Turn sound on</span>
+          </button>
         </div>
         <img class="sticker sticker--tr" src="/assets/marks/burst.svg" alt="" width="72" height="72"/>
         <img class="sticker sticker--bl" src="/assets/marks/arrow-loop.svg" alt="" width="84" height="84"/>
@@ -267,6 +283,6 @@
   </div>
 </footer>
 
-<script src="/assets/og.js" defer></script>
+<script src="/assets/og.js?v=2" defer></script>
 </body>
 </html>

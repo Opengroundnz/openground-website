@@ -116,4 +116,75 @@
     roleRadios.forEach(function (r) { r.addEventListener("change", applyBranches); });
     applyBranches();
   }
+
+  /* Self-playing film with a sound toggle.
+     Autoplay is only ever allowed while a film is silent, so the film starts
+     muted and the button does the asking. Three things are deliberate here.
+     One: autoplay is started from here rather than from an autoplay attribute,
+     so reduced motion and Data Saver can opt out before 13MB is fetched, and so
+     a blocked play (iOS Low Power Mode, for one) simply leaves the poster and
+     the play button sitting there. Two: turning the sound on stops the loop and
+     restarts the reel, because hearing a highlight reel from the middle is worse
+     than a one-second jump, and audio that repeats forever is rude. Three: the
+     film pauses when it scrolls out of sight and picks up when it comes back,
+     unless the visitor paused it themselves. */
+  document.querySelectorAll("[data-video]").forEach(function (frame) {
+    var video = frame.querySelector("video");
+    var btn = frame.querySelector(".btn-sound");
+    if (!video || !btn) return;
+
+    var label = btn.querySelector(".btn-sound__text");
+    var noop = function () {};
+    var attempt = function () { var p = video.play(); if (p && p.catch) p.catch(noop); };
+
+    var paint = function () {
+      var text = video.muted ? "Turn sound on" : "Mute";
+      btn.classList.toggle("is-muted", video.muted);
+      btn.setAttribute("aria-label", text);
+      if (label) label.textContent = text;
+    };
+
+    var neverUnmuted = true;
+    btn.addEventListener("click", function () {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        video.loop = false;
+        if (neverUnmuted) { neverUnmuted = false; video.currentTime = 0; }
+        attempt();
+      }
+      paint();
+    });
+    /* The native controls carry a mute of their own, so follow the film. */
+    video.addEventListener("volumechange", paint);
+    paint();
+    frame.classList.add("is-live");
+
+    var conn = navigator.connection || {};
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || conn.saveData === true) return;
+
+    video.muted = true;
+    video.preload = "auto";
+
+    if ("IntersectionObserver" in window) {
+      /* Starting from the observer rather than from here means a film further
+         down a page never fetches itself until it is actually looked at. */
+      var autoPaused = true;
+      new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) {
+              if (autoPaused) { autoPaused = false; attempt(); }
+            } else if (!video.paused) {
+              autoPaused = true;
+              video.pause();
+            }
+          });
+        },
+        { threshold: 0.2 }
+      ).observe(video);
+    } else {
+      attempt();
+    }
+  });
+
 })();

@@ -20,7 +20,17 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
   underline, arrow-loop).
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
-- Bump the `og.css?v=N` query on every CSS change (cache busting). Currently v21.
+- Bump the `og.css?v=N` query on every CSS change and the `og.js?v=N` query on
+  every script change (cache busting). Currently CSS v22, JS v2.
+- **Hero film plays itself.** The highlight reel starts muted and looping as soon
+  as it scrolls into view, with a white "Turn sound on" pill in its top-left
+  corner. Every browser blocks autoplay with sound, so that pill is the only
+  thing telling a visitor there is audio: it never hides and it always names the
+  action, not the state. `og.js` does the starting, not an `autoplay` attribute,
+  so reduced motion and Data Saver opt out before the 13MB file is fetched, and a
+  blocked play leaves the poster and the normal play button. Turning the sound on
+  drops the loop and restarts the reel. The film pauses when it scrolls out of
+  sight. Native `controls` stay on throughout for scrubbing and fullscreen.
 - Home page order (Will, 15 Aug): hero, ticker, track-record stats (3), testimonials
   (no photo), the year as a mini timeline (`.steps--mini .steps--terms`), the office
   (two B:HIVE shots in `.duo`, Year 12 only), success stories, New for 2027 (real

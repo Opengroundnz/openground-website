@@ -331,6 +331,47 @@ p:last-child { margin-bottom: 0; }
 
 /* Vertical films sit at a readable width and centre in their column. */
 .frame--portrait { max-width: 22rem; margin-inline: auto; }
+
+/* ---- Sound toggle on a self-playing film ----
+   Every browser blocks autoplay with sound, so a film that starts on its own
+   starts silent and this button is the only thing telling a visitor there is
+   sound to be had. It therefore never hides, never waits for a hover, and says
+   what pressing it will do rather than what state the film is in. It is hidden
+   until og.js marks the frame live, because without JavaScript it does nothing
+   and the native controls already carry a mute. The two-class selector beats
+   `.frame--tall > *` above, which would otherwise stretch it over the film. */
+.btn-sound { display: none; }
+.frame.is-live > .btn-sound {
+  position: absolute;
+  inset: 0.75rem auto auto 0.75rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.85rem;
+  border: 2px solid var(--vegemite);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--vegemite);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0 rgba(25, 25, 25, 1);
+  transition: background 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+.frame.is-live > .btn-sound:hover { background: var(--hokey); }
+.frame.is-live > .btn-sound:active { transform: translate(0.1rem, 0.1rem); box-shadow: 0.1rem 0.1rem 0 rgba(25, 25, 25, 1); }
+.btn-sound:focus-visible { outline: 3px solid var(--pinkgill); outline-offset: 3px; }
+.btn-sound svg { flex: none; fill: currentColor; }
+/* One icon shows at a time: crossed-out while the film is silent. */
+.btn-sound .btn-sound__off { display: none; }
+.btn-sound.is-muted .btn-sound__on { display: none; }
+.btn-sound.is-muted .btn-sound__off { display: block; }
 .img-bw img { filter: grayscale(1) contrast(1.05); }
 
 /* Floating sticker shapes around a frame */
