@@ -21,7 +21,7 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 - Webflow CSS/JS and jQuery are no longer referenced by any page (the old asset
   folders remain in the repo for the images/logos still in use).
 - Bump the `og.css?v=N` query on every CSS change and the `og.js?v=N` query on
-  every script change (cache busting). Currently CSS v22, JS v2.
+  every script change (cache busting). Currently CSS v23, JS v2.
 - **Hero film plays itself.** The highlight reel starts muted and looping as soon
   as it scrolls into view, with a white "Turn sound on" pill in its top-left
   corner. Every browser blocks autoplay with sound, so that pill is the only

@@ -1041,6 +1041,8 @@ select.input {
   font-size: 0.8125rem;
   color: rgba(242,232,221,0.7);
 }
+.footer__base a { color: inherit; text-underline-offset: 2px; }
+.footer__base a:hover { color: var(--hokey); }
 .footer__socials { display: flex; gap: 1rem; }
 .footer__socials a {
   display: flex;
