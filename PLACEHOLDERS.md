@@ -63,10 +63,9 @@ room: `mentor-huddle.jpg`, `cohort-pitch.jpg`, `bhive-floor.jpg`, `bhive-cohort.
   `linkedin.com/in/oliver-linton-nz` (he has several; this is the one he confirmed).
   ChargerGoGo has closed, so that chip was removed and the present-tense mention
   dropped from his story copy.
-- **Google Form (2027):** done 28 Aug. The Student branch callout on get-involved.html now
-  links to the register-interest form (`forms.gle/udXYXjhoVX9qLUZm9`). The 2027 *application*
-  form does not exist yet, so the copy promises an emailed application later rather than an
-  application now. Swap the button through to the real application form once it is built.
+- **Google Form (2027):** done 15 Oct 2026. The Student branch callout on get-involved.html,
+  For Students and the home hero all link to the 2027 application form
+  (`forms.gle/U6eAw5f1wJEspiWL6`). The old register-interest form is no longer linked.
   No `data-todo` placeholders remain on the site.
 - **Photography style:** per the brand style guide, photos should be natural, eye level,
   soft light, and work in black and white. Portraits now render in full colour;
