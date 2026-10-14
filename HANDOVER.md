@@ -64,6 +64,9 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 2. **Pretty URLs**: internal links are extensionless (`/about`); `netlify.toml`
    carries the redirects. Any new page needs netlify.toml + sitemap.xml updates.
 3. **No refund messaging anywhere. Hard rule.** No "Term 1 free" (policy died 29 Jul 2026).
+   The For Students FAQ "What if my child needs to withdraw?" is Will-approved (15 Oct 2026)
+   and does not conflict: it only says to email admin@openground.co.nz and that each case is
+   worked through individually. It promises no refund; keep it that way.
 4. **No em or en dashes. British NZ English.**
 5. **Never push to main.** Branch, PR, Will merges, Netlify deploys from main.
 6. No external CDN dependencies beyond Google Fonts and youtube-nocookie embeds.
@@ -73,8 +76,10 @@ All six pages rebuilt as clean semantic HTML on a hand-built design system:
 ## Content decisions already applied (do not revert)
 
 - $1,500 fee is mentioned inside the small "There is an application process." card
-  (no big price block; Will killed it 15 Aug). Scholarship wording, per Will 15 Aug:
-  limited, for genuine financial hardship, evidence requested.
+  (no big price block; Will killed it 15 Aug). Scholarship wording, per Steve and agreed by
+  Will 15 Oct 2026 (replaces the old "evidence requested" line everywhere): "Limited
+  scholarships are available for genuine financial hardship. A parent or guardian can email
+  admin@openground.co.nz by Sunday 8 November to ask." Never publish a fee due date.
 - Applying requires a business idea (it can change in Term 1). FAQ updated 15 Aug;
   do not restore "no idea needed" to application copy (registering interest is different).
 - Dragon's Den removed from the Year 12 framing (5 Aug 2026 decision; it belongs to
@@ -129,12 +134,16 @@ See PLACEHOLDERS.md for the full slot-by-slot map. Two rules learned the hard wa
 2. **Headshots**: Brett, Dale and Adam supplied 15 Aug and in place, with Dale and
    Adam confirmed the right way round. Only the Smale family trustee seat is still a
    placeholder, pending the name. Brett's file is 300x300, softer than the rest.
-3. **Link todos: done.** `google-form-2027` now points at the register-interest
-   Google Form (the 2027 *application* form does not exist yet, so the copy promises
-   an emailed application later). ChargerGoGo has closed, so Olly's mentions were
+3. **Link todos: done.** Applications for Year 12 in 2027 are open (15 Oct 2026): every
+   "Apply now" button goes straight to the application Google Form
+   (`forms.gle/U6eAw5f1wJEspiWL6`), new tab. Close Sunday 8 November 2026, offers by Friday
+   20 November. The register-interest form is no longer linked anywhere; choosing Student on
+   Get Involved now shows the apply callout, and the student fields below it are for
+   questions only (`Why-Openground` was removed). ChargerGoGo has closed, so Olly's mentions were
    dropped from both success-stories.html and the home page card.
-4. **Sessions line**: "Monday to Thursday, 3:30 to 5pm" is on the home page and the
-   For Students FAQ; Will to confirm before merge.
+4. **Sessions line: done (15 Oct 2026, from Steve).** Before school 7:00 to 8:30am
+   (Monday, Wednesday, Thursday or Friday) or after school 3:30 to 5:00pm (Monday to
+   Thursday). Do not reintroduce "after school" only wording.
 5. **Highlight reel: done.** Adam delivered it 29 Aug. Self-hosted at
    `assets/video/og-highlight-reel.mp4`, click to play, `object-fit: contain` so it
    keeps its shape in fullscreen. See PLACEHOLDERS.md.
